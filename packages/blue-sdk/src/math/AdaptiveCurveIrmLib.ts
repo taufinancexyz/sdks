@@ -4,7 +4,7 @@ import type { BigIntish } from "../types.js";
 import { MathLib } from "./MathLib.js";
 
 /**
- * JS implementation of {@link https://github.com/morpho-org/morpho-blue-irm/blob/main/src/libraries/adaptive-curve/ExpLib.sol ExpLib} used by the Adaptive Curve IRM.
+ * JS implementation of {@link https://github.com/taufinancexyz/morpho-blue-irm/blob/main/src/libraries/adaptive-curve/ExpLib.sol ExpLib} used by the Adaptive Curve IRM.
  */
 export namespace AdaptiveCurveIrmLib {
   export const CURVE_STEEPNESS = 4_000000000000000000n;

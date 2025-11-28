@@ -4,7 +4,6 @@ on:
   workflow_call:
 
 permissions:
-  id-token: write
   contents: write
 
 jobs:
@@ -52,9 +51,6 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: '@taufinancexyz'
 
-      # Required to use OIDC trusted publishing.
-      - run: npm install -g npm@latest
-
       - run: pnpm install --frozen-lockfile
 
       - id: release
@@ -69,6 +65,8 @@ jobs:
       - run: pnpm publish --no-git-checks --access public --tag ${{ steps.release.outputs.channel }}
         working-directory: packages/${{ matrix.package }}
         if: steps.release.outputs.version
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: gh release create ${{ steps.release.outputs.tag }} --target ${{ steps.release.outputs.branch }} --notes-file packages/${{ matrix.package }}/CHANGELOG.md --title '${{ steps.release.outputs.tag }}' ${{ steps.release.outputs.channel == 'latest' && '--latest' || '--prerelease' }}
         if: steps.release.outputs.version
@@ -77,4 +75,3 @@ jobs:
 
       - run: echo "- [RELEASE] ${{ steps.release.outputs.version }}" >> $GITHUB_STEP_SUMMARY
         if: steps.release.outputs.version
-

@@ -6,7 +6,7 @@
         <img src="https://img.shields.io/npm/v/@taufinancexyz/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
-<a href="https://github.com/morpho-org/liquidation-sdk-viem/blob/main/LICENSE">
+<a href="https://github.com/taufinancexyz/liquidation-sdk-viem/blob/main/LICENSE">
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
         <img src="https://img.shields.io/npm/l/@taufinancexyz/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">

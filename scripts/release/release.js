@@ -28,9 +28,9 @@ if (releaseType) {
         version:
           lastTag == null
             ? tag
-            : `[${tag}](https://github.com/morpho-org/sdks/compare/${lastTag}...${tag})`,
+            : `[${tag}](https://github.com/taufinancexyz/sdks/compare/${lastTag}...${tag})`,
         host: "https://github.com",
-        owner: "morpho-org",
+        owner: "taufinancexyz",
         repository: "sdks",
         commit: "commit",
       },

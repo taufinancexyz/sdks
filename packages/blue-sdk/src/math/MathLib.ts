@@ -4,7 +4,7 @@ export type RoundingDirection = "Up" | "Down";
 
 /**
  * Library to manage fixed-point arithmetic.
- * https://github.com/morpho-org/morpho-blue/blob/main/src/libraries/MathLib.sol
+ * https://github.com/taufinancexyz/morpho-blue/blob/main/src/libraries/MathLib.sol
  */
 export namespace MathLib {
   export const WAD = 1_000000000000000000n;

@@ -3,7 +3,7 @@ import type { BigIntish } from "../types.js";
 import { MathLib, type RoundingDirection } from "./MathLib.js";
 
 /**
- * JS implementation of {@link https://github.com/morpho-org/morpho-blue/blob/main/src/libraries/SharesMathLib.sol SharesMathLib} used by Morpho Blue
+ * JS implementation of {@link https://github.com/taufinancexyz/morpho-blue/blob/main/src/libraries/SharesMathLib.sol SharesMathLib} used by Morpho Blue
  * & MetaMorpho (via {@link https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC4626.sol ERC4626}).
  */
 export namespace SharesMath {

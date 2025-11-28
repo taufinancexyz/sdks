@@ -4,10 +4,10 @@
   "version": "2.0.0",
   "author": "Morpho Association <contact@morpho.org>",
   "contributors": ["Rubilmax <rmilon@gmail.com>"],
-  "repository": "github:morpho-org/sdks",
-  "homepage": "https://github.com/morpho-org/sdks",
+  "repository": "github:taufinancexyz/sdks",
+  "homepage": "https://github.com/taufinancexyz/sdks",
   "bugs": {
-    "url": "https://github.com/morpho-org/sdks/issues",
+    "url": "https://github.com/taufinancexyz/sdks/issues",
     "email": "contact@morpho.org"
   },
   "type": "module",

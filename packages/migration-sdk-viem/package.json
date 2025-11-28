@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "author": "Morpho Association <contact@morpho.org>",
   "contributors": ["oumar-fall"],
-  "repository": "github:morpho-org/sdks",
-  "homepage": "https://github.com/morpho-org/sdks",
+  "repository": "github:taufinancexyz/sdks",
+  "homepage": "https://github.com/taufinancexyz/sdks",
   "bugs": {
-    "url": "https://github.com/morpho-org/sdks/issues",
+    "url": "https://github.com/taufinancexyz/sdks/issues",
     "email": "contact@morpho.org"
   },
   "license": "MIT",
