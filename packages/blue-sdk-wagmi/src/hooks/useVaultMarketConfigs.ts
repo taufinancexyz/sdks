@@ -76,10 +76,10 @@ export function useVaultMarketConfigs<
   uniqueVaultMarketConfigs.forEach(({ vault, marketId }, index) => {
     if (vault == null || marketId == null) return;
 
-    const { data, error, isFetching } = orderedResults[index]!;
+    const { data, error: _error, isFetching } = orderedResults[index]!;
 
     (result.data[vault] ??= {})[marketId] = data;
-    (result.error[vault] ??= {})[marketId] = error;
+    (result.error[vault] ??= {})[marketId] = null;
     (result.isFetching[vault] ??= {})[marketId] = isFetching;
 
     if (isFetching) result.isFetchingAny = true;

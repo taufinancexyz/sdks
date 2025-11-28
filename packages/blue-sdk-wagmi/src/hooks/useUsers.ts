@@ -62,10 +62,10 @@ export function useUsers<config extends Config = ResolvedRegister["config"]>({
     .values()
     .filter(isDefined)
     .forEach((user, index) => {
-      const { data, error, isFetching } = orderedResults[index]!;
+      const { data, error: _error, isFetching } = orderedResults[index]!;
 
       result.data[user] = data;
-      result.error[user] = error;
+      result.error[user] = null;
       result.isFetching[user] = isFetching;
 
       if (isFetching) result.isFetchingAny = true;

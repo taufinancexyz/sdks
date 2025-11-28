@@ -71,10 +71,10 @@ export function usePositions<
   uniquePositions.forEach(({ user, marketId }, index) => {
     if (user == null || marketId == null) return;
 
-    const { data, error, isFetching } = orderedResults[index]!;
+    const { data, error: _error, isFetching } = orderedResults[index]!;
 
     (result.data[user] ??= {})[marketId] = data;
-    (result.error[user] ??= {})[marketId] = error;
+    (result.error[user] ??= {})[marketId] = null;
     (result.isFetching[user] ??= {})[marketId] = isFetching;
 
     if (isFetching) result.isFetchingAny = true;

@@ -1,9 +1,4 @@
-import {
-  type Address,
-  ChainId,
-  MathLib,
-  addressesRegistry,
-} from "@taufinancexyz/blue-sdk";
+import { type Address, MathLib } from "@taufinancexyz/blue-sdk";
 import { isDefined } from "@taufinancexyz/morpho-ts";
 
 import { migrationAddresses } from "../../config.js";
@@ -43,18 +38,20 @@ export async function fetchAaveV3OptimizerPositions(
   if (!migrationContracts) return [];
 
   const [allMarkets, isBundlerManaging, nonce] = await Promise.all([
-    [addressesRegistry[ChainId.EthMainnet].wNative], // TODO we only focus on pure suppliers now
-    readContract(client, {
-      ...parameters,
-      abi: migrationContracts.morpho.abi,
-      address: migrationContracts.morpho.address,
-      functionName: "isManagedBy",
-      args: [
-        user,
-        addressesRegistry[ChainId.EthMainnet].bundler3
-          .aaveV3OptimizerMigrationAdapter,
-      ],
-    }),
+    [],
+    false,
+    // [addressesRegistry[ChainId.EthMainnet].wNative], // TODO we only focus on pure suppliers now
+    // readContract(client, {
+    //   ...parameters,
+    //   abi: migrationContracts.morpho.abi,
+    //   address: migrationContracts.morpho.address,
+    //   functionName: "isManagedBy",
+    //   args: [
+    //     user,
+    //     addressesRegistry[ChainId.EthMainnet].bundler3
+    //       .aaveV3OptimizerMigrationAdapter,
+    //   ],
+    // }),
     readContract(client, {
       ...parameters,
       abi: migrationContracts.morpho.abi,

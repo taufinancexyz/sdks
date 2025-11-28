@@ -67,10 +67,10 @@ export function useVaultV2s<
     .values()
     .filter(isDefined)
     .forEach((vaultV2, index) => {
-      const { data, error, isFetching } = orderedResults[index]!;
+      const { data, error: _null, isFetching } = orderedResults[index]!;
 
       result.data[vaultV2] = data;
-      result.error[vaultV2] = error;
+      result.error[vaultV2] = null;
       result.isFetching[vaultV2] = isFetching;
 
       if (isFetching) result.isFetchingAny = true;

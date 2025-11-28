@@ -64,10 +64,10 @@ export function useVaultConfigs<
     .values()
     .filter(isDefined)
     .forEach((vault, index) => {
-      const { data, error, isFetching } = orderedResults[index]!;
+      const { data, error: _error, isFetching } = orderedResults[index]!;
 
       result.data[vault] = data;
-      result.error[vault] = error;
+      result.error[vault] = null;
       result.isFetching[vault] = isFetching;
 
       if (isFetching) result.isFetchingAny = true;

@@ -1,16 +1,12 @@
 import {
   type Address,
-  ChainId,
   ExchangeRateWrappedToken,
   NATIVE_ADDRESS,
   getChainAddresses,
 } from "@taufinancexyz/blue-sdk";
 import { type Time, isDefined, values } from "@taufinancexyz/morpho-ts";
 
-import {
-  migrationAddresses,
-  migrationAddressesRegistry,
-} from "../../config.js";
+import { migrationAddresses } from "../../config.js";
 import type { MigratablePosition } from "../../positions/index.js";
 import { MigratableSupplyPosition_CompoundV2 } from "../../positions/supply/compoundV2.supply.js";
 import {
@@ -26,8 +22,8 @@ import { cErc20Abi, cEtherAbi, mErc20Abi } from "../../abis/compoundV2.js";
 import { fetchAccruedExchangeRate } from "./compoundV2.helpers.js";
 
 export const COMPOUNDING_PERIOD: Record<number, Time.PeriodLike> = {
-  [ChainId.BaseMainnet]: "s",
-  [ChainId.EthMainnet]: { unit: "s", duration: 12 }, // 1 block
+  // [ChainId.BaseMainnet]: "s",
+  // [ChainId.EthMainnet]: { unit: "s", duration: 12 }, // 1 block
 };
 
 async function fetchCompoundV2InstancePosition(
@@ -41,12 +37,16 @@ async function fetchCompoundV2InstancePosition(
   const chainId = parameters.chainId;
 
   const { abi, calls } = (() => {
-    if (chainId === ChainId.EthMainnet) {
+    if (
+      (() => false)()
+      // chainId === ChainId.EthMainnet
+    ) {
       if (
-        cTokenAddress ===
-        migrationAddressesRegistry[ChainId.EthMainnet][
-          MigratableProtocol.compoundV2
-        ].cEth.address
+        (() => false)()
+        // cTokenAddress ===
+        // migrationAddressesRegistry[ChainId.EthMainnet][
+        //   MigratableProtocol.compoundV2
+        // ].cEth.address
       )
         return {
           calls: [

@@ -62,10 +62,10 @@ export function useTokens<config extends Config = ResolvedRegister["config"]>({
     .values()
     .filter(isDefined)
     .forEach((token, index) => {
-      const { data, error, isFetching } = orderedResults[index]!;
+      const { data, error: _error, isFetching } = orderedResults[index]!;
 
       result.data[token] = data;
-      result.error[token] = error;
+      result.error[token] = null;
       result.isFetching[token] = isFetching;
 
       if (isFetching) result.isFetchingAny = true;

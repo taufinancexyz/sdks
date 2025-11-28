@@ -70,10 +70,10 @@ export function useHoldings<
   uniqueHoldings.forEach(({ user, token }, index) => {
     if (user == null || token == null) return;
 
-    const { data, error, isFetching } = orderedResults[index]!;
+    const { data, error: _error, isFetching } = orderedResults[index]!;
 
     (result.data[user] ??= {})[token] = data;
-    (result.error[user] ??= {})[token] = error;
+    (result.error[user] ??= {})[token] = null;
     (result.isFetching[user] ??= {})[token] = isFetching;
 
     if (isFetching) result.isFetchingAny = true;

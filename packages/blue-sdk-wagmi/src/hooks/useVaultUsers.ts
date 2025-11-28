@@ -70,10 +70,10 @@ export function useVaultUsers<
   uniqueVaultUsers.forEach(({ vault, user }, index) => {
     if (vault == null || user == null) return;
 
-    const { data, error, isFetching } = orderedResults[index]!;
+    const { data, error: _error, isFetching } = orderedResults[index]!;
 
     (result.data[vault] ??= {})[user] = data;
-    (result.error[vault] ??= {})[user] = error;
+    (result.error[vault] ??= {})[user] = null;
     (result.isFetching[vault] ??= {})[user] = isFetching;
 
     if (isFetching) result.isFetchingAny = true;

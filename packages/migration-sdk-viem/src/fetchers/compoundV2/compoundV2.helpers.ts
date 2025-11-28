@@ -1,4 +1,4 @@
-import { ChainId, MathLib } from "@taufinancexyz/blue-sdk";
+import { MathLib } from "@taufinancexyz/blue-sdk";
 import type { FetchParameters } from "@taufinancexyz/blue-sdk-viem";
 import type { Address, Client } from "viem";
 import { getBlock, getChainId, readContract } from "viem/actions";
@@ -62,10 +62,11 @@ export const fetchAccruedExchangeRate = async (
 ) => {
   parameters.chainId ??= await getChainId(client);
 
-  const chainId = parameters.chainId;
-
   const { abi, calls } = (() => {
-    if (chainId === ChainId.EthMainnet) {
+    if (
+      (() => false)()
+      // chainId === ChainId.EthMainnet
+    ) {
       return {
         calls: [
           readContract(client, {
@@ -183,8 +184,8 @@ export const fetchAccruedExchangeRate = async (
       borrowRatePerUnit,
     },
     // return the rate you would experience if you interract at next block
-    chainId === ChainId.BaseMainnet
-      ? BigInt(blockUnit) + 2n
-      : BigInt(blockUnit) + 1n,
+    // chainId === ChainId.BaseMainnet
+    //   ? BigInt(blockUnit) + 2n
+    BigInt(blockUnit) + 1n,
   );
 };

@@ -63,10 +63,10 @@ export function useMarketsParams<
     .values()
     .filter(isDefined)
     .forEach((marketId, index) => {
-      const { data, error, isFetching } = orderedResults[index]!;
+      const { data, error: _error, isFetching } = orderedResults[index]!;
 
       result.data[marketId] = data;
-      result.error[marketId] = error;
+      result.error[marketId] = null;
       result.isFetching[marketId] = isFetching;
 
       if (isFetching) result.isFetchingAny = true;
