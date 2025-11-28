@@ -1,36 +1,36 @@
-# @morpho-org/blue-sdk-viem
+# @taufinancexyz/blue-sdk-viem
 
-<a href="https://www.npmjs.com/package/@morpho-org/blue-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/blue-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/blue-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/blue-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/blue-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/blue-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/blue-sdk-viem/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/blue-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/blue-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/blue-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/blue-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/blue-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/blue-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/blue-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/blue-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/blue-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/blue-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
 <br />
 
-Viem-based augmentation of [`@morpho-org/blue-sdk`](../blue-sdk/) that exports (and optionally injects) viem-based fetch methods.
+Viem-based augmentation of [`@taufinancexyz/blue-sdk`](../blue-sdk/) that exports (and optionally injects) viem-based fetch methods.
 
 ## Installation
 
 ```bash
-npm install @morpho-org/blue-sdk-viem
+npm install @taufinancexyz/blue-sdk-viem
 ```
 
 ```bash
-yarn add @morpho-org/blue-sdk-viem
+yarn add @taufinancexyz/blue-sdk-viem
 ```
 
 ## Getting Started
@@ -41,21 +41,21 @@ Opt in classes augmentation to easily fetch an entire entity of the Morpho Blue 
 
 ```typescript
 // Granular, opt-in, per-entity class augmentation:
-import "@morpho-org/blue-sdk-viem/lib/augment/AccrualPosition";
-import "@morpho-org/blue-sdk-viem/lib/augment/Holding";
-import "@morpho-org/blue-sdk-viem/lib/augment/Market";
-import "@morpho-org/blue-sdk-viem/lib/augment/MarketParams";
-import "@morpho-org/blue-sdk-viem/lib/augment/Position";
-import "@morpho-org/blue-sdk-viem/lib/augment/Token";
-import "@morpho-org/blue-sdk-viem/lib/augment/VaultConfig";
-import "@morpho-org/blue-sdk-viem/lib/augment/Vault";
-import "@morpho-org/blue-sdk-viem/lib/augment/VaultUser";
-import "@morpho-org/blue-sdk-viem/lib/augment/VaultMarketAllocation";
-import "@morpho-org/blue-sdk-viem/lib/augment/VaultMarketConfig";
-import "@morpho-org/blue-sdk-viem/lib/augment/VaultMarketPublicAllocatorConfig";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/AccrualPosition";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/Holding";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/Market";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/MarketParams";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/Position";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/Token";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/VaultConfig";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/Vault";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/VaultUser";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/VaultMarketAllocation";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/VaultMarketConfig";
+import "@taufinancexyz/blue-sdk-viem/lib/augment/VaultMarketPublicAllocatorConfig";
 
 // Or full, opt-in class augmentation:
-import "@morpho-org/blue-sdk-viem/lib/augment";
+import "@taufinancexyz/blue-sdk-viem/lib/augment";
 ```
 
 ### Fetch the config of a specific market
@@ -63,9 +63,9 @@ import "@morpho-org/blue-sdk-viem/lib/augment";
 Leverage the [`MarketParams`](./src/market/MarketParams.ts) class to fetch information on a given market's immutable configuration:
 
 ```typescript
-import { MarketId } from "@morpho-org/blue-sdk";
+import { MarketId } from "@taufinancexyz/blue-sdk";
 // /!\ Import AccrualPosition from the augmentation file (or simply import the file)
-import { MarketParams } from "@morpho-org/blue-sdk-viem/lib/augment/MarketParams";
+import { MarketParams } from "@taufinancexyz/blue-sdk-viem/lib/augment/MarketParams";
 
 const config = await MarketParams.fetch(
   "0xb323495f7e4148be5643a4ea4a8221eef163e4bccfdedc2a6f4696baacbc86cc" as MarketId,
@@ -80,10 +80,10 @@ config.collateralToken; // e.g. 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0.
 Leverage the [`Market`](./src/market/Market.ts) class to fetch information on a specific market:
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
-import { MarketId } from "@morpho-org/blue-sdk";
+import { Time } from "@taufinancexyz/morpho-ts";
+import { MarketId } from "@taufinancexyz/blue-sdk";
 // /!\ Import AccrualPosition from the augmentation file (or simply import the file)
-import { Market } from "@morpho-org/blue-sdk-viem/lib/augment/Market";
+import { Market } from "@taufinancexyz/blue-sdk-viem/lib/augment/Market";
 
 const market = await Market.fetch(
   "0xb323495f7e4148be5643a4ea4a8221eef163e4bccfdedc2a6f4696baacbc86cc" as MarketId,
@@ -105,10 +105,10 @@ accruedMarket.borrowApy; // e.g. 8% (scaled by WAD).
 Leverage the [`Position`](./src/position/Position.ts) class to fetch the position of a user on a given market:
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
-import { MarketId } from "@morpho-org/blue-sdk";
+import { Time } from "@taufinancexyz/morpho-ts";
+import { MarketId } from "@taufinancexyz/blue-sdk";
 // /!\ Import AccrualPosition from the augmentation file (or simply import the file)
-import { AccrualPosition } from "@morpho-org/blue-sdk-viem/lib/augment/Position";
+import { AccrualPosition } from "@taufinancexyz/blue-sdk-viem/lib/augment/Position";
 
 const position = await AccrualPosition.fetch(
   "0x7f65e7326F22963e2039734dDfF61958D5d284Ca",
@@ -125,7 +125,7 @@ const accruedPosition = position.accrueInterest(Time.timestamp()); // Accrue int
 position.borrowAssets; // e.g. 23_500000n (in loan assets).
 ```
 
-[downloads-img]: https://img.shields.io/npm/dt/@morpho-org/blue-sdk-viem
-[downloads-url]: https://www.npmtrends.com/@morpho-org/blue-sdk-viem
-[npm-img]: https://img.shields.io/npm/v/@morpho-org/blue-sdk-viem
-[npm-url]: https://www.npmjs.com/package/@morpho-org/blue-sdk-viem
+[downloads-img]: https://img.shields.io/npm/dt/@taufinancexyz/blue-sdk-viem
+[downloads-url]: https://www.npmtrends.com/@taufinancexyz/blue-sdk-viem
+[npm-img]: https://img.shields.io/npm/v/@taufinancexyz/blue-sdk-viem
+[npm-url]: https://www.npmjs.com/package/@taufinancexyz/blue-sdk-viem

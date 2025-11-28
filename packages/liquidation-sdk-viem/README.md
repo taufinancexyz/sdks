@@ -1,21 +1,21 @@
-# @morpho-org/liquidation-sdk-viem
+# @taufinancexyz/liquidation-sdk-viem
 
-<a href="https://www.npmjs.com/package/@morpho-org/liquidation-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/liquidation-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/liquidation-sdk-viem/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/liquidation-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/liquidation-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/liquidation-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/liquidation-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -26,11 +26,11 @@ Viem-based package that provides utilities to build viem-based liquidation bots 
 ## Installation
 
 ```bash
-npm install @morpho-org/liquidation-sdk-viem
+npm install @taufinancexyz/liquidation-sdk-viem
 ```
 
 ```bash
-yarn add @morpho-org/liquidation-sdk-viem
+yarn add @taufinancexyz/liquidation-sdk-viem
 ```
 
 ## Getting Started

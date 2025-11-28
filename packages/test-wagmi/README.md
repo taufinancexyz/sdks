@@ -1,36 +1,36 @@
-# @morpho-org/test-wagmi
+# @taufinancexyz/test-wagmi
 
-<a href="https://www.npmjs.com/package/@morpho-org/test-wagmi">
+<a href="https://www.npmjs.com/package/@taufinancexyz/test-wagmi">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/test-wagmi?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/test-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/test-wagmi?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/test-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/test-wagmi/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/test-wagmi?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/test-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/test-wagmi?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/test-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/test-wagmi">
+<a href="https://www.npmjs.com/package/@taufinancexyz/test-wagmi">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/test-wagmi?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/test-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/test-wagmi?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/test-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
 <br />
 
-Wagmi-based extension of [`@morpho-org/test`](../test/) that injects a test Wagmi config as a test fixture alongside viem's anvil client.
+Wagmi-based extension of [`@taufinancexyz/test`](../test/) that injects a test Wagmi config as a test fixture alongside viem's anvil client.
 
 ## Installation
 
 ```bash
-npm install @morpho-org/test-wagmi
+npm install @taufinancexyz/test-wagmi
 ```
 
 ```bash
-yarn add @morpho-org/test-wagmi
+yarn add @taufinancexyz/test-wagmi
 ```
 
 ## Getting Started
@@ -38,7 +38,7 @@ yarn add @morpho-org/test-wagmi
 Export an extended vitest `test`:
 
 ```typescript
-import { createWagmiTest } from "@morpho-org/test-wagmi";
+import { createWagmiTest } from "@taufinancexyz/test-wagmi";
 import { mainnet } from "viem/chains";
 
 export const test = createWagmiTest(mainnet, {

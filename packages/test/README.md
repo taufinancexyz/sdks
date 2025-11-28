@@ -1,21 +1,21 @@
-# @morpho-org/test
+# @taufinancexyz/test
 
-<a href="https://www.npmjs.com/package/@morpho-org/test">
+<a href="https://www.npmjs.com/package/@taufinancexyz/test">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/test?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/test?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/test?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/test?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/test/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/test?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/test?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/test?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/test?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/test">
+<a href="https://www.npmjs.com/package/@taufinancexyz/test">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/test?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/test?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/test?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/test?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -28,11 +28,11 @@ Heavily inspired by [`prool`](https://github.com/wevm/prool), but lighter & fast
 ## Installation
 
 ```bash
-npm install @morpho-org/test
+npm install @taufinancexyz/test
 ```
 
 ```bash
-yarn add @morpho-org/test
+yarn add @taufinancexyz/test
 ```
 
 ## Getting Started
@@ -42,7 +42,7 @@ yarn add @morpho-org/test
 Export an extended vitest `test`:
 
 ```typescript
-import { createViemTest } from "@morpho-org/test/vitest";
+import { createViemTest } from "@taufinancexyz/test/vitest";
 import { mainnet } from "viem/chains";
 
 export const test = createViemTest(mainnet, {
@@ -58,7 +58,7 @@ See more on its internal usage for [viem-based E2E tests here](../blue-sdk-viem/
 Export an extended Playwright `test`:
 
 ```typescript
-import { createViemTest } from "@morpho-org/test/playwright";
+import { createViemTest } from "@taufinancexyz/test/playwright";
 import { mainnet } from "viem/chains";
 
 export const test = createViemTest(mainnet, {
@@ -71,7 +71,7 @@ export const test = createViemTest(mainnet, {
 
 ```typescript
 import { mainnet } from "viem/chains";
-import { spawnAnvil } from "@morpho-org/test";
+import { spawnAnvil } from "@taufinancexyz/test";
 
 spawnAnvil(mainnet, { forkBlockNumber: 19_750_000n });
 ```

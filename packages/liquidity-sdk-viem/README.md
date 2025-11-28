@@ -1,21 +1,21 @@
-# @morpho-org/liquidity-sdk-viem
+# @taufinancexyz/liquidity-sdk-viem
 
-<a href="https://www.npmjs.com/package/@morpho-org/liquidity-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/liquidity-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/liquidity-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/liquidity-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/liquidity-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/liquidity-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/liquidity-sdk-viem/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/liquidity-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/liquidity-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/liquidity-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/liquidity-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/liquidity-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/liquidity-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/liquidity-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/liquidity-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/liquidity-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/liquidity-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -26,11 +26,11 @@ Viem-based package that provides utilities to build viem-based liquidity bots on
 ## Installation
 
 ```bash
-npm install @morpho-org/liquidity-sdk-viem
+npm install @taufinancexyz/liquidity-sdk-viem
 ```
 
 ```bash
-yarn add @morpho-org/liquidity-sdk-viem
+yarn add @taufinancexyz/liquidity-sdk-viem
 ```
 
 ## Getting Started
@@ -38,7 +38,7 @@ yarn add @morpho-org/liquidity-sdk-viem
 ### Fetch from API or RPC
 
 ```typescript
-import { LiquidityLoader } from "@morpho-org/liquidity-sdk-viem";
+import { LiquidityLoader } from "@taufinancexyz/liquidity-sdk-viem";
 
 const loader = new LiquidityLoader(
   client // viem client.
@@ -59,8 +59,8 @@ const [withdrawals1, withdrawals2] = await Promise.all([
 ### Fetch only from API
 
 ```typescript
-import { ChainId } from "@morpho-org/blue-sdk";
-import { LiquidityLoader } from "@morpho-org/liquidity-sdk-viem";
+import { ChainId } from "@taufinancexyz/blue-sdk";
+import { LiquidityLoader } from "@taufinancexyz/liquidity-sdk-viem";
 
 const loader = new LiquidityLoader({ chainId: ChainId.EthMainnet });
 

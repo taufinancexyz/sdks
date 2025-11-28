@@ -1,21 +1,21 @@
-# @morpho-org/blue-sdk
+# @taufinancexyz/blue-sdk
 
-<a href="https://www.npmjs.com/package/@morpho-org/blue-sdk">
+<a href="https://www.npmjs.com/package/@taufinancexyz/blue-sdk">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/blue-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/blue-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/blue-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/blue-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/blue-sdk/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/blue-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/blue-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/blue-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/blue-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/blue-sdk">
+<a href="https://www.npmjs.com/package/@taufinancexyz/blue-sdk">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/blue-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/blue-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/blue-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/blue-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -35,11 +35,11 @@ Framework-agnostic package that defines Morpho-related entity classes:
 ## Installation
 
 ```bash
-npm install @morpho-org/blue-sdk
+npm install @taufinancexyz/blue-sdk
 ```
 
 ```bash
-yarn add @morpho-org/blue-sdk
+yarn add @taufinancexyz/blue-sdk
 ```
 
 ## Getting Started
@@ -49,7 +49,7 @@ yarn add @morpho-org/blue-sdk
 Leverage the [`MarketParams`](./src/market/MarketParams.ts) class to manipulate a given market's immutable configuration:
 
 ```typescript
-import { MarketParams } from "@morpho-org/blue-sdk";
+import { MarketParams } from "@taufinancexyz/blue-sdk";
 
 const config = new MarketParams({
   loanToken: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", // WETH
@@ -67,8 +67,8 @@ config.liquidationIncentiveFactor; // e.g. 1_090000000000000000n (109%).
 Leverage the [`Market`](./src/market/Market.ts) class to manipulate a specific market:
 
 ```typescript
-import { Market, MarketParams } from "@morpho-org/blue-sdk";
-import { Time } from "@morpho-org/morpho-ts";
+import { Market, MarketParams } from "@taufinancexyz/blue-sdk";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 const market = new Market({
   config: new MarketParams({
@@ -102,8 +102,8 @@ accruedMarket.toSupplyAssets(shares); // Convert supply shares to assets.
 Leverage the [`Position`](./src/position/Position.ts) class to manipulate the position of a user on a given market:
 
 ```typescript
-import { Position } from "@morpho-org/blue-sdk";
-import { Time } from "@morpho-org/morpho-ts";
+import { Position } from "@taufinancexyz/blue-sdk";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 const position = new AccrualPosition(
   new Position({

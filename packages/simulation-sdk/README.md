@@ -1,21 +1,21 @@
-# @morpho-org/simulation-sdk
+# @taufinancexyz/simulation-sdk
 
-<a href="https://www.npmjs.com/package/@morpho-org/simulation-sdk">
+<a href="https://www.npmjs.com/package/@taufinancexyz/simulation-sdk">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/simulation-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/simulation-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/simulation-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/simulation-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/simulation-sdk/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/simulation-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/simulation-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/simulation-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/simulation-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/simulation-sdk">
+<a href="https://www.npmjs.com/package/@taufinancexyz/simulation-sdk">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/simulation-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/simulation-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/simulation-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/simulation-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -26,9 +26,9 @@ Framework-agnostic package that defines methods to simulate interactions on Morp
 ## Installation
 
 ```bash
-npm install @morpho-org/simulation-sdk
+npm install @taufinancexyz/simulation-sdk
 ```
 
 ```bash
-yarn add @morpho-org/simulation-sdk
+yarn add @taufinancexyz/simulation-sdk
 ```

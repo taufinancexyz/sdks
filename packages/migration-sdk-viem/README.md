@@ -1,36 +1,36 @@
-# @morpho-org/migration-sdk-viem
+# @taufinancexyz/migration-sdk-viem
 
-<a href="https://www.npmjs.com/package/@morpho-org/migration-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/migration-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/migration-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/migration-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/migration-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/migration-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/migration-sdk-viem/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/migration-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/migration-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/migration-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/migration-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/migration-sdk-viem">
+<a href="https://www.npmjs.com/package/@taufinancexyz/migration-sdk-viem">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/migration-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/migration-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/migration-sdk-viem?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/migration-sdk-viem?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
 <br />
 
-Viem-based extension of `@morpho-org/bundler-sdk-viem` that exports utilities to build migration bundles to migrate lending positions (on aave, compound, morpho-aaveV3-optimizer, ...) to the morpho protocol.
+Viem-based extension of `@taufinancexyz/bundler-sdk-viem` that exports utilities to build migration bundles to migrate lending positions (on aave, compound, morpho-aaveV3-optimizer, ...) to the morpho protocol.
 
 ## Installation
 
 ```bash
-npm install @morpho-org/migration-sdk-viem
+npm install @taufinancexyz/migration-sdk-viem
 ```
 
 ```bash
-yarn add @morpho-org/migration-sdk-viem
+yarn add @taufinancexyz/migration-sdk-viem
 ```
 
 ## `MigratableSupplyPosition`
@@ -52,11 +52,11 @@ An abstraction representing a supply position that can be migrated between proto
 ### Creating an Instance
 
 ```typescript
-import { ChainId, Address } from "@morpho-org/blue-sdk";
+import { ChainId, Address } from "@taufinancexyz/blue-sdk";
 import { 
     MigratableSupplyPosition_AaveV2,
     IMigratableSupplyPosition_AaveV2
-    } from "@morpho-org/migration-sdk-viem";
+    } from "@taufinancexyz/migration-sdk-viem";
 
 const positionConfig: IMigratableSupplyPosition_AaveV2 = {
   chainId: 1,
@@ -179,11 +179,11 @@ An abstraction representing a borrow position that can be migrated between proto
 ### Creating an Instance
 
 ```typescript
-import { ChainId, Address } from "@morpho-org/blue-sdk";
+import { ChainId, Address } from "@taufinancexyz/blue-sdk";
 import { 
     MigratableBorrowPosition_AaveV2,
     IMigratableBorrowPosition_AaveV2
-    } from "@morpho-org/migration-sdk-viem";
+    } from "@taufinancexyz/migration-sdk-viem";
 
 const positionConfig: IMigratableBorrowPosition_AaveV2 = {
   chainId: 1,
@@ -325,7 +325,7 @@ A utility function to fetch migratable positions for a user across various DeFi 
 ### Usage
 
 ```typescript
-import { fetchMigratablePositions, MigratableProtocol } from "@morpho-org/migration-sdk-viem";
+import { fetchMigratablePositions, MigratableProtocol } from "@taufinancexyz/migration-sdk-viem";
 import { Client } from "viem";
 
 const user = "0x123...abc"; // Replace with the user's address
@@ -393,8 +393,8 @@ A class representing a migratable borrow position on Morpho Blue, enabling the m
 #### Creating an Instance
 
 ```ts
-import { fetchAccrualPosition } from "@morpho-org/blue-sdk-viem"
-import { MigratableBorrowPosition_Blue } from "@morpho-org/migration-sdk-viem"
+import { fetchAccrualPosition } from "@taufinancexyz/blue-sdk-viem"
+import { MigratableBorrowPosition_Blue } from "@taufinancexyz/migration-sdk-viem"
 
 const { market, ...position } = await fetchAccrualPosition(client, user, marketId);
 
@@ -409,7 +409,7 @@ const borrowPosition = new MigratableBorrowPosition_Blue({
 #### Generating Migration Operations
 
 ```ts
-import { ChainId } from "@morpho-org/blue-sdk";
+import { ChainId } from "@taufinancexyz/blue-sdk";
 
 const migrationArgs = {
   marketTo: "0x...newMarketId",
@@ -423,7 +423,7 @@ const operations = borrowPosition.getMigrationOperations(migrationArgs, ChainId.
 console.log("Generated Migration Operations:", operations);
 ```
 
-The obtained operation is a `Blue_SupplyCollateral` operation with callbacks and can thus be processed as a normal operation using `@morpho-org/bundler-sdk-viem`
+The obtained operation is a `Blue_SupplyCollateral` operation with callbacks and can thus be processed as a normal operation using `@taufinancexyz/bundler-sdk-viem`
 
 ---
 

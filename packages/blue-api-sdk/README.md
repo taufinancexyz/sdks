@@ -1,21 +1,21 @@
-# @morpho-org/blue-api-sdk
+# @taufinancexyz/blue-api-sdk
 
-<a href="https://www.npmjs.com/package/@morpho-org/blue-api-sdk">
+<a href="https://www.npmjs.com/package/@taufinancexyz/blue-api-sdk">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/blue-api-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/blue-api-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/blue-api-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/blue-api-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/blue-api-sdk/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/blue-api-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/blue-api-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/blue-api-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/blue-api-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/blue-api-sdk">
+<a href="https://www.npmjs.com/package/@taufinancexyz/blue-api-sdk">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/blue-api-sdk?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/blue-api-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/blue-api-sdk?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/blue-api-sdk?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -26,25 +26,25 @@ GraphQL SDK that exports types from the [API's GraphQL schema](https://blue-api.
 ## Installation
 
 ```bash
-npm install @morpho-org/blue-api-sdk
+npm install @taufinancexyz/blue-api-sdk
 ```
 
 ```bash
-yarn add @morpho-org/blue-api-sdk
+yarn add @taufinancexyz/blue-api-sdk
 ```
 
 ## Getting Started
 
 ### Codegen
 
-Create a `codegen.ts` file and define your desired preset & plugins, importing types from `@morpho-org/blue-api-sdk`. Below is given 3 typically recommended configurations:
+Create a `codegen.ts` file and define your desired preset & plugins, importing types from `@taufinancexyz/blue-api-sdk`. Below is given 3 typically recommended configurations:
 
 #### Recommended [near-operation-file](https://the-guild.dev/graphql/codegen/plugins/presets/near-operation-file-preset) preset config
 
 ```typescript
 import type { CodegenConfig } from "@graphql-codegen/cli";
 
-import { BLUE_API_GRAPHQL_URL } from "@morpho-org/morpho-ts";
+import { BLUE_API_GRAPHQL_URL } from "@taufinancexyz/morpho-ts";
 
 const config: CodegenConfig = {
   ...,
@@ -55,7 +55,7 @@ const config: CodegenConfig = {
       ...,
       preset: "near-operation-file",
       presetConfig: {
-        baseTypesPath: "~@morpho-org/blue-api-sdk",
+        baseTypesPath: "~@taufinancexyz/blue-api-sdk",
       },
     },
   },
@@ -69,7 +69,7 @@ export default config;
 ```typescript
 import type { CodegenConfig } from "@graphql-codegen/cli";
 
-import { BLUE_API_GRAPHQL_URL } from "@morpho-org/morpho-ts";
+import { BLUE_API_GRAPHQL_URL } from "@taufinancexyz/morpho-ts";
 
 const config: CodegenConfig = {
   ...,
@@ -80,7 +80,7 @@ const config: CodegenConfig = {
       ...,
       preset: "import-types",
       presetConfig: {
-        typesPath: "@morpho-org/blue-api-sdk",
+        typesPath: "@taufinancexyz/blue-api-sdk",
       },
     },
   },
@@ -92,7 +92,7 @@ const config: CodegenConfig = {
 ```typescript
 import type { CodegenConfig } from "@graphql-codegen/cli";
 
-import { BLUE_API_GRAPHQL_URL } from "@morpho-org/morpho-ts";
+import { BLUE_API_GRAPHQL_URL } from "@taufinancexyz/morpho-ts";
 
 const config: CodegenConfig = {
   ...,
@@ -135,7 +135,7 @@ const config: CodegenConfig = {
 Define an Apollo cache to use and specify the cache type policies exported from this package:
 
 ```typescript
-import { typePolicies } from "@morpho-org/blue-api-sdk";
+import { typePolicies } from "@taufinancexyz/blue-api-sdk";
 
 // Apollo InMemoryCache needs to serialize BigInts to JSON, so we need to add a toJSON method to BigInt.prototype.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#use_within_json

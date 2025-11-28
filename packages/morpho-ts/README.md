@@ -1,21 +1,21 @@
-# @morpho-org/morpho-ts
+# @taufinancexyz/morpho-ts
 
-<a href="https://www.npmjs.com/package/@morpho-org/morpho-ts">
+<a href="https://www.npmjs.com/package/@taufinancexyz/morpho-ts">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/morpho-ts?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/morpho-ts?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/morpho-ts?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/morpho-ts?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/morpho-ts/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/morpho-ts?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/morpho-ts?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/morpho-ts?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/morpho-ts?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/morpho-ts">
+<a href="https://www.npmjs.com/package/@taufinancexyz/morpho-ts">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/morpho-ts?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/morpho-ts?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/morpho-ts?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/morpho-ts?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -26,11 +26,11 @@ TypeScript package to handle all things time & format-related.
 ## Installation
 
 ```bash
-npm install @morpho-org/morpho-ts
+npm install @taufinancexyz/morpho-ts
 ```
 
 ```bash
-yarn add @morpho-org/morpho-ts
+yarn add @taufinancexyz/morpho-ts
 ```
 
 ## Getting Started
@@ -56,7 +56,7 @@ The return value will retain the nullability of the input value (giving priority
 > You can store the partially populated formatter as a custom formatter:
 >
 > ```typescript
-> import { format } from "@morpho-org/morpho-ts";
+> import { format } from "@taufinancexyz/morpho-ts";
 >
 > const dollarFormatter = format.short
 >   .smallValuesWithCommas()
@@ -73,7 +73,7 @@ The return value will retain the nullability of the input value (giving priority
 Alternatively, you can create a standalone formatting function by calling `createOf` on your populated formatter.
 
 ```typescript
-import { format } from "@morpho-org/morpho-ts";
+import { format } from "@taufinancexyz/morpho-ts";
 
 const formatDollar = format.short
   .smallValuesWithCommas()
@@ -90,7 +90,7 @@ formatDollar(123456789n, 4); // "$12.34k"
 Formats a value as a hexadecimal string.
 
 ```typescript
-import { format } from "@morpho-org/morpho-ts";
+import { format } from "@taufinancexyz/morpho-ts";
 
 format.hex.of(255n); // "ff"
 ```
@@ -109,7 +109,7 @@ format.hex.of(255n); // "ff"
 Formats a value as a standard number with optional customization.
 
 ```typescript
-import { format } from "@morpho-org/morpho-ts";
+import { format } from "@taufinancexyz/morpho-ts";
 
 format.number.of(12345n, 2); // "123.45"
 format.number.of(123.45); // "123.45"
@@ -139,7 +139,7 @@ _<sub><span style="color:#C73E59">*</span> If the provided value is `null` or `u
 Formats a value as a comma-separated string.
 
 ```typescript
-import { format } from "@morpho-org/morpho-ts";
+import { format } from "@taufinancexyz/morpho-ts";
 
 format.commas.of(123456789n, 2); // "1,234,567.89"
 format.commas.of(1234567.89); // "1,234,567.89"
@@ -158,7 +158,7 @@ format.commas.digits(2).unit("$").of(1234567); // "$1,234,567.00"
 Formats a value in a short notation with units (e.g., `k`, `M`, `B`).
 
 ```typescript
-import { format } from "@morpho-org/morpho-ts";
+import { format } from "@taufinancexyz/morpho-ts";
 
 format.short.of(1234567890n, 2); // "12.34567890M"
 format.short.of(12345678.9); // "12.34567890M"
@@ -178,7 +178,7 @@ format.short.digits(2).smallValuesWithCommas().of(1000000_00000000n, 8); // "1.0
 Formats a value as a percentage.
 
 ```typescript
-import { format } from "@morpho-org/morpho-ts";
+import { format } from "@taufinancexyz/morpho-ts";
 
 format.percent.of(1000, 4); // "10"
 format.percent.of(0.1); // "10"
@@ -197,7 +197,7 @@ format.percent.digits(1).sign().of(0.123456); // "+12.3%"
 You can create a custom `format` object with default options that will be applied to all formatters created from it. You can also create custom formatters with specific names and options using the second argument.
 
 ```typescript
-import { createFormat } from "@morpho-org/morpho-ts";
+import { createFormat } from "@taufinancexyz/morpho-ts";
 
 const customFormat = createFormat({
     all: { digits: 2 }, // all formatters will format with 2 digits
@@ -242,7 +242,7 @@ The `Time` utility also provides types to define periods:
 You can convert a unit or a period-like object into a `Period`:
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 Time.toPeriod("h"); // { unit: 'h', duration: 1 }
 Time.toPeriod({ unit: "min", duration: 15 }); // { unit: 'min', duration: 15 }
@@ -271,7 +271,7 @@ The following units are supported:
 Convert 1 hour to minutes:
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 const minutes = Time.min.from.h(1); // 60
 const minutesFromPeriod = Time.min.fromPeriod("h"); // 60
@@ -280,7 +280,7 @@ const minutesFromPeriod = Time.min.fromPeriod("h"); // 60
 Convert 5 days to hours:
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 const hours = Time.h.from.d(5n); // 120n
 const hoursFromPeriod = Time.h.fromPeriod({unit: "d", duration: 5}); // 120
@@ -289,7 +289,7 @@ const hoursFromPeriod = Time.h.fromPeriod({unit: "d", duration: 5}); // 120
 Convert 2 weeks to days:
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 const days = Time.d.from.w(2); // 14
 const daysFromPeriod = Time.w.fromPeriod({unit: "w", duration: 2}); // 14
@@ -305,7 +305,7 @@ Pauses execution for the specified amount of milliseconds, eventually returning 
 **Usage:**
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 await Time.wait(1000); // Waits for 1 second
 const value = await Time.wait(1000, "Go"); // Waits for 1 second and returns "Go"
@@ -320,7 +320,7 @@ Returns the current Unix timestamp in seconds as a bigint.
 **Usage:**
 
 ```typescript
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 Time.timestamp(); // 1692671241n
 ```

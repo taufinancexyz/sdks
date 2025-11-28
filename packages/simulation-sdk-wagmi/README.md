@@ -1,21 +1,21 @@
-# @morpho-org/simulation-sdk-wagmi
+# @taufinancexyz/simulation-sdk-wagmi
 
-<a href="https://www.npmjs.com/package/@morpho-org/simulation-sdk-wagmi">
+<a href="https://www.npmjs.com/package/@taufinancexyz/simulation-sdk-wagmi">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@morpho-org/simulation-sdk-wagmi?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/v/@morpho-org/simulation-sdk-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/v/@taufinancexyz/simulation-sdk-wagmi?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/v/@taufinancexyz/simulation-sdk-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Version">
     </picture>
 </a>
 <a href="https://github.com/morpho-org/simulation-sdk-wagmi/blob/main/LICENSE">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@morpho-org/simulation-sdk-wagmi?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/l/@morpho-org/simulation-sdk-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/l/@taufinancexyz/simulation-sdk-wagmi?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/l/@taufinancexyz/simulation-sdk-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="MIT License">
     </picture>
 </a>
-<a href="https://www.npmjs.com/package/@morpho-org/simulation-sdk-wagmi">
+<a href="https://www.npmjs.com/package/@taufinancexyz/simulation-sdk-wagmi">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@morpho-org/simulation-sdk-wagmi?colorA=21262d&colorB=21262d&style=flat">
-        <img src="https://img.shields.io/npm/dm/@morpho-org/simulation-sdk-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
+        <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/npm/dm/@taufinancexyz/simulation-sdk-wagmi?colorA=21262d&colorB=21262d&style=flat">
+        <img src="https://img.shields.io/npm/dm/@taufinancexyz/simulation-sdk-wagmi?colorA=f6f8fa&colorB=f6f8fa&style=flat" alt="Downloads per month">
     </picture>
 </a>
 <br />
@@ -26,11 +26,11 @@ Wagmi-based package that exports Wagmi (React) hooks to fetch Morpho-related ent
 ## Installation
 
 ```bash
-npm install @morpho-org/simulation-sdk-wagmi
+npm install @taufinancexyz/simulation-sdk-wagmi
 ```
 
 ```bash
-yarn add @morpho-org/simulation-sdk-wagmi
+yarn add @taufinancexyz/simulation-sdk-wagmi
 ```
 
 ## Getting Started
@@ -38,9 +38,9 @@ yarn add @morpho-org/simulation-sdk-wagmi
 ```tsx
 import { useMemo } from "react";
 
-import { Address, MarketId } from "@morpho-org/blue-sdk";
-import { simulateOperation } from "@morpho-org/simulation-sdk";
-import { useSimulationState } from "@morpho-org/simulation-sdk-wagmi";
+import { Address, MarketId } from "@taufinancexyz/blue-sdk";
+import { simulateOperation } from "@taufinancexyz/simulation-sdk";
+import { useSimulationState } from "@taufinancexyz/simulation-sdk-wagmi";
 
 export function Component({
   user,
