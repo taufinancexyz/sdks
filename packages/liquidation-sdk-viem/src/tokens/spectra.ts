@@ -1,15 +1,15 @@
-import { ChainId } from "@taufinancexyz/blue-sdk";
+import type { ChainId } from "@taufinancexyz/blue-sdk";
 import { getAddress } from "viem";
 
 export namespace Spectra {
   export const apiUrl = (chainId: ChainId) => {
     switch (chainId) {
-      case ChainId.EthMainnet:
-        return "https://app.spectra.finance/api/v1/MAINNET/pools";
-      case ChainId.BaseMainnet:
-        return "https://app.spectra.finance/api/v1/BASE/pools";
-      case ChainId.ArbitrumMainnet:
-        return "https://app.spectra.finance/api/v1/ARBITRUM/pools";
+      // case ChainId.EthMainnet:
+      //   return "https://app.spectra.finance/api/v1/MAINNET/pools";
+      // case ChainId.BaseMainnet:
+      //   return "https://app.spectra.finance/api/v1/BASE/pools";
+      // case ChainId.ArbitrumMainnet:
+      //   return "https://app.spectra.finance/api/v1/ARBITRUM/pools";
       default:
         return undefined;
     }

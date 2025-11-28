@@ -14,7 +14,7 @@ import {
 } from "./abis.js";
 
 import {
-  ChainId,
+  type ChainId,
   type InputMarketParams,
   getChainAddresses,
 } from "@taufinancexyz/blue-sdk";
@@ -744,30 +744,29 @@ export namespace BundlerAction {
    * @param skipRevert Whether to allow the wrap to revert without making the whole bundler revert. Defaults to false.
    */
   export function morphoWrapperDepositFor(
-    chainId: ChainId,
-    recipient: Address,
-    amount: bigint,
-    skipRevert = false,
+    _chainId: ChainId,
+    _recipient: Address,
+    _amount: bigint,
+    _skipRevert = false,
   ): BundlerCall[] {
-    if (chainId !== ChainId.EthMainnet)
-      throw new Error("MORPHO wrapping is only available on ethereum mainnet");
-    const {
-      bundler3: { generalAdapter1 },
-    } = getChainAddresses(chainId);
+    throw new Error("MORPHO wrapping is only available on ethereum mainnet");
+    // const {
+    //   bundler3: { generalAdapter1 },
+    // } = getChainAddresses(chainId);
 
-    return [
-      {
-        to: generalAdapter1,
-        data: encodeFunctionData({
-          abi: ethereumGeneralAdapter1Abi,
-          functionName: "morphoWrapperDepositFor",
-          args: [recipient, amount],
-        }),
-        value: 0n,
-        skipRevert,
-        callbackHash: zeroHash,
-      },
-    ];
+    // return [
+    //   {
+    //     to: generalAdapter1,
+    //     data: encodeFunctionData({
+    //       abi: ethereumGeneralAdapter1Abi,
+    //       functionName: "morphoWrapperDepositFor",
+    //       args: [recipient, amount],
+    //     }),
+    //     value: 0n,
+    //     skipRevert,
+    //     callbackHash: zeroHash,
+    //   },
+    // ];
   }
 
   /* ERC20 Wrapper */

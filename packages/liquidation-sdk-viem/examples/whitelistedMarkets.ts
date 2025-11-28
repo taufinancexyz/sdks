@@ -1,7 +1,6 @@
 import { BlueSdkConverter } from "@taufinancexyz/blue-api-sdk";
 import {
   type Address,
-  ChainId,
   type MarketId,
   UnknownTokenPriceError,
   erc20WrapperTokens,
@@ -11,16 +10,13 @@ import {
 
 import { safeGetAddress, safeParseNumber } from "@taufinancexyz/blue-sdk-viem";
 import {
-  Flashbots,
   LiquidationEncoder,
   Midas,
-  Pendle,
   Spectra,
   apiSdk,
   collateralUsdThreshold,
   getPositions,
   getRepayDataPreLiquidation,
-  mainnetAddresses,
 } from "@taufinancexyz/liquidation-sdk-viem";
 import {
   type Account,
@@ -54,7 +50,7 @@ export const check = async <
 >(
   executorAddress: Address,
   client: client,
-  flashbotsAccount: LocalAccount,
+  _flashbotsAccount: LocalAccount,
   additionalMarketIds: MarketId[] = [],
 ) => {
   const chainId = client.chain.id;
@@ -175,9 +171,10 @@ export const check = async <
           (market.params.liquidationIncentiveFactor - BigInt.WAD) / 2n;
 
         const [pendleTokens, spectraTokens] = await Promise.all([
-          chainId === ChainId.EthMainnet
-            ? Pendle.getTokens(chainId)
-            : undefined,
+          // chainId === ChainId.EthMainnet
+          //   ? Pendle.getTokens(chainId)
+          //   : undefined,
+          undefined,
           Spectra.getTokens(chainId),
         ]);
 
@@ -211,26 +208,26 @@ export const check = async <
                 ));
 
                 // As there is no liquidity for sUSDS, we use the sUSDS withdrawal function to get USDS instead
-                if (
-                  market.params.collateralToken === mainnetAddresses.sUsds &&
-                  chainId === ChainId.EthMainnet
-                ) {
-                  const usdsWithdrawalAmount =
-                    await encoder.previewUSDSWithdrawalAmount(srcAmount);
+                // if (
+                //   market.params.collateralToken === mainnetAddresses.sUsds &&
+                //   chainId === ChainId.EthMainnet
+                // ) {
+                //   const usdsWithdrawalAmount =
+                //     await encoder.previewUSDSWithdrawalAmount(srcAmount);
 
-                  encoder.erc20Approve(
-                    mainnetAddresses.sUsds,
-                    mainnetAddresses.sUsds,
-                    maxUint256,
-                  );
-                  encoder.usdsWithdraw(
-                    usdsWithdrawalAmount,
-                    executorAddress,
-                    executorAddress,
-                  );
-                  srcAmount = usdsWithdrawalAmount;
-                  srcToken = mainnetAddresses.usds!;
-                }
+                //   encoder.erc20Approve(
+                //     mainnetAddresses.sUsds,
+                //     mainnetAddresses.sUsds,
+                //     maxUint256,
+                //   );
+                //   encoder.usdsWithdraw(
+                //     usdsWithdrawalAmount,
+                //     executorAddress,
+                //     executorAddress,
+                //   );
+                //   srcAmount = usdsWithdrawalAmount;
+                //   srcToken = mainnetAddresses.usds!;
+                // }
 
                 // Handle Midas Tokens
 
@@ -243,34 +240,34 @@ export const check = async <
                 switch (true) {
                   // In case of Usual tokens, there aren't much liquidity outside of curve, so we use it instead of 1inch/paraswap
                   // Process USD0/USD0++ collateral liquidation with specific process (using curve)
-                  case market.params.collateralToken ===
-                    mainnetAddresses["usd0usd0++"] &&
-                    chainId === ChainId.EthMainnet:
-                    dstAmount = await encoder.curveSwapUsd0Usd0PPForUsdc(
-                      srcAmount,
-                      position.market.toBorrowAssets(
-                        position.market.getLiquidationRepaidShares(
-                          seizedAssets,
-                        )!,
-                      ),
-                      executorAddress,
-                    );
-                    break;
-                  // Process USD0++ colalteral liquidation with specific process (using curve)
-                  case market.params.collateralToken ===
-                    mainnetAddresses["usd0++"] &&
-                    chainId === ChainId.EthMainnet: {
-                    dstAmount = await encoder.swapUSD0PPToUSDC(
-                      srcAmount,
-                      position.market.toBorrowAssets(
-                        position.market.getLiquidationRepaidShares(
-                          seizedAssets,
-                        )!,
-                      ),
-                      executorAddress,
-                    );
-                    break;
-                  }
+                  // case market.params.collateralToken ===
+                  //   mainnetAddresses["usd0usd0++"] &&
+                  //   chainId === ChainId.EthMainnet:
+                  //   dstAmount = await encoder.curveSwapUsd0Usd0PPForUsdc(
+                  //     srcAmount,
+                  //     position.market.toBorrowAssets(
+                  //       position.market.getLiquidationRepaidShares(
+                  //         seizedAssets,
+                  //       )!,
+                  //     ),
+                  //     executorAddress,
+                  //   );
+                  //   break;
+                  // // Process USD0++ colalteral liquidation with specific process (using curve)
+                  // case market.params.collateralToken ===
+                  //   mainnetAddresses["usd0++"] &&
+                  //   chainId === ChainId.EthMainnet: {
+                  //   dstAmount = await encoder.swapUSD0PPToUSDC(
+                  //     srcAmount,
+                  //     position.market.toBorrowAssets(
+                  //       position.market.getLiquidationRepaidShares(
+                  //         seizedAssets,
+                  //       )!,
+                  //     ),
+                  //     executorAddress,
+                  //   );
+                  //   break;
+                  // }
                   // Default case, use 1inch/paraswap for other collaterals
                   default: {
                     const result = await encoder.handleTokenSwap(
@@ -306,17 +303,17 @@ export const check = async <
                 // Handle ERC4626 share tokens.
                 // Convex staking wrapper tokens will have an underlying token but won't expose the corresponding withdrawn asset,
                 // which are automatically withdrawn upon liquidation, at an exchange rate of 1.
-                if (
-                  collateralUnderlyingAsset != null &&
-                  withdrawnAssets != null &&
-                  !(mainnetAddresses.sUsds && chainId === ChainId.EthMainnet)
-                )
-                  encoder.erc4626Redeem(
-                    market.params.collateralToken,
-                    seizedAssets,
-                    executorAddress,
-                    executorAddress,
-                  );
+                // if (
+                //   collateralUnderlyingAsset != null &&
+                //   withdrawnAssets != null &&
+                //   !(mainnetAddresses.sUsds && chainId === ChainId.EthMainnet)
+                // )
+                //   encoder.erc4626Redeem(
+                //     market.params.collateralToken,
+                //     seizedAssets,
+                //     executorAddress,
+                //     executorAddress,
+                //   );
 
                 if (loanMorphoAllowance === 0n)
                   // Allows to handle changes in repaidAssets due to price changes and saves gas.
@@ -344,7 +341,7 @@ export const check = async <
                     );
 
                 const populatedTx = await encoder.encodeExec();
-                const [gasLimit, blockNumber, txCount, { maxFeePerGas }] =
+                const [gasLimit, _blockNumber, txCount, { maxFeePerGas }] =
                   await Promise.all([
                     estimateGas(client, populatedTx),
                     getBlockNumber(client),
@@ -374,20 +371,20 @@ export const check = async <
                   maxFeePerGas,
                 };
 
-                if (chainId === ChainId.EthMainnet) {
-                  const signedBundle = await Flashbots.signBundle([
-                    {
-                      transaction,
-                      client,
-                    },
-                  ]);
+                // if (chainId === ChainId.EthMainnet) {
+                //   const signedBundle = await Flashbots.signBundle([
+                //     {
+                //       transaction,
+                //       client,
+                //     },
+                //   ]);
 
-                  return await Flashbots.sendRawBundle(
-                    signedBundle,
-                    blockNumber + 1n,
-                    flashbotsAccount,
-                  );
-                }
+                //   return await Flashbots.sendRawBundle(
+                //     signedBundle,
+                //     blockNumber + 1n,
+                //     flashbotsAccount,
+                //   );
+                // }
 
                 return await sendTransaction(client, transaction);
               } catch (error) {

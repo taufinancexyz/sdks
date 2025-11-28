@@ -1,6 +1,6 @@
 import {
   type Address,
-  ChainId,
+  type ChainId,
   type MarketParams,
   MathLib,
 } from "@taufinancexyz/blue-sdk";
@@ -622,7 +622,7 @@ export class LiquidationEncoder<
     repaidAssets: bigint,
     origin: Address,
   ) {
-    let srcToken = initialSrcToken;
+    const srcToken = initialSrcToken;
     const srcAmount = initialSrcAmount;
     const tries: SwapAttempt[] = [];
     let dstAmount = 0n;
@@ -656,14 +656,16 @@ export class LiquidationEncoder<
       dstAmount = BigInt(bestSwap.dstAmount);
 
       if (dstAmount < repaidAssets.wadMulDown(BigInt.WAD + slippage)) {
-        // If we don't have enough liquidity, we try to swap to the alternative token and retry
-        if (
-          Sky.isSkyToken(srcToken) &&
-          chainId === ChainId.EthMainnet &&
-          tries.length === 1
-        ) {
-          srcToken = Sky.getAlternativeToken(srcToken);
+        if ((() => false)()) {
         }
+        // If we don't have enough liquidity, we try to swap to the alternative token and retry
+        // if (
+        //   Sky.isSkyToken(srcToken) &&
+        //   chainId === ChainId.EthMainnet &&
+        //   tries.length === 1
+        // ) {
+        //   srcToken = Sky.getAlternativeToken(srcToken);
+        // }
         // If even using the alternative token we still don't have enough liquidity, we try with both tokens (and half the amount)
         else if (Sky.isTokenPair(tries[0]?.srcToken, tries[1]?.srcToken)) {
           const halfAmount = srcAmount / 2n;

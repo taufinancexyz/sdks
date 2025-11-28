@@ -5,14 +5,12 @@ import {
   AccrualVaultV2MorphoVaultV1Adapter,
   type Address,
   AssetBalances,
-  ChainId,
   type Holding,
   type Market,
   type MarketId,
   MathLib,
   type MaxBorrowOptions,
   type MaxWithdrawCollateralOptions,
-  NATIVE_ADDRESS,
   type PeripheralBalanceType,
   type Position,
   type Token,
@@ -528,61 +526,65 @@ export class SimulationState implements InputSimulationState {
         }
       }, UnknownDataError);
 
-      const { wstEth, stEth, wNative } = getChainAddresses(this.chainId);
+      const {
+        wstEth: _wstEth,
+        stEth: _stEth,
+        wNative: _wNative,
+      } = getChainAddresses(this.chainId);
 
       // staking is only available on mainnet for now
-      if (
-        this.chainId === ChainId.EthMainnet &&
-        token === wstEth &&
-        wNative != null &&
-        stEth != null
-      ) {
-        _try(() => {
-          const wEthBalance = this.getBundleBalance(user, wNative);
+      // if (
+      //   this.chainId === ChainId.EthMainnet &&
+      //   token === wstEth &&
+      //   wNative != null &&
+      //   stEth != null
+      // ) {
+      //   _try(() => {
+      //     const wEthBalance = this.getBundleBalance(user, wNative);
 
-          if (wEthBalance != null) {
-            const stEthToken = this.getWrappedToken(stEth);
-            const stEthBalance = stEthToken.toWrappedExactAmountIn(
-              wEthBalance,
-              slippage,
-            );
-            const wrappedBalance = wrappedToken.toWrappedExactAmountIn(
-              stEthBalance,
-              slippage,
-            );
+      //     if (wEthBalance != null) {
+      //       const stEthToken = this.getWrappedToken(stEth);
+      //       const stEthBalance = stEthToken.toWrappedExactAmountIn(
+      //         wEthBalance,
+      //         slippage,
+      //       );
+      //       const wrappedBalance = wrappedToken.toWrappedExactAmountIn(
+      //         stEthBalance,
+      //         slippage,
+      //       );
 
-            balances.add({
-              type: "unwrapped-staked-wrapped",
-              srcToken: this.getToken(wNative),
-              srcAmount: wEthBalance,
-              dstAmount: wrappedBalance,
-            });
-          }
-        }, UnknownDataError);
+      //       balances.add({
+      //         type: "unwrapped-staked-wrapped",
+      //         srcToken: this.getToken(wNative),
+      //         srcAmount: wEthBalance,
+      //         dstAmount: wrappedBalance,
+      //       });
+      //     }
+      //   }, UnknownDataError);
 
-        _try(() => {
-          const ethBalance = this.getBundleBalance(user, NATIVE_ADDRESS);
+      //   _try(() => {
+      //     const ethBalance = this.getBundleBalance(user, NATIVE_ADDRESS);
 
-          if (ethBalance != null) {
-            const stEthToken = this.getWrappedToken(stEth);
-            const stEthBalance = stEthToken.toWrappedExactAmountIn(
-              ethBalance,
-              slippage,
-            );
-            const wrappedBalance = wrappedToken.toWrappedExactAmountIn(
-              stEthBalance,
-              slippage,
-            );
+      //     if (ethBalance != null) {
+      //       const stEthToken = this.getWrappedToken(stEth);
+      //       const stEthBalance = stEthToken.toWrappedExactAmountIn(
+      //         ethBalance,
+      //         slippage,
+      //       );
+      //       const wrappedBalance = wrappedToken.toWrappedExactAmountIn(
+      //         stEthBalance,
+      //         slippage,
+      //       );
 
-            balances.add({
-              type: "staked-wrapped",
-              srcToken: this.getToken(NATIVE_ADDRESS),
-              srcAmount: ethBalance,
-              dstAmount: wrappedBalance,
-            });
-          }
-        }, UnknownDataError);
-      }
+      //       balances.add({
+      //         type: "staked-wrapped",
+      //         srcToken: this.getToken(NATIVE_ADDRESS),
+      //         srcAmount: ethBalance,
+      //         dstAmount: wrappedBalance,
+      //       });
+      //     }
+      //   }, UnknownDataError);
+      // }
 
       _try(() => {
         if (!(wrappedToken instanceof VaultToken)) return;
