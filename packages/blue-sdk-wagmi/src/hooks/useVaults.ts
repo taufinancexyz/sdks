@@ -1,5 +1,5 @@
-import { isDefined } from "@morpho-org/morpho-ts";
 import { useQueries } from "@tanstack/react-query";
+import { isDefined } from "@taufinancexyz/morpho-ts";
 import { useRef } from "react";
 import type { Address, UnionOmit } from "viem";
 import { type Config, type ResolvedRegister, useConfig } from "wagmi";

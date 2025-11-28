@@ -1,4 +1,4 @@
-import { retryPromiseLinearBackoff } from "@morpho-org/morpho-ts";
+import { retryPromiseLinearBackoff } from "@taufinancexyz/morpho-ts";
 import { OneInch } from "./1inch.js";
 import { Paraswap } from "./paraswap.js";
 import type { SwapParams, SwapResponse } from "./types.js";

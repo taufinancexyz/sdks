@@ -3,10 +3,10 @@ import {
   ChainId,
   addresses,
   registerCustomAddresses,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import type { MidasConfig } from "./tokens/midas";
 
-declare module "@morpho-org/blue-sdk" {
+declare module "@taufinancexyz/blue-sdk" {
   interface ChainAddresses {
     timeBoundedUrd?: Address;
     marketRewardsProgramRegistry?: Address;

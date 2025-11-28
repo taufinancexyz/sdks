@@ -1,4 +1,4 @@
-import type { BigIntish } from "@morpho-org/blue-sdk";
+import type { BigIntish } from "@taufinancexyz/blue-sdk";
 import type { SwapParams, SwapResponse } from "./types.js";
 
 export namespace OneInch {

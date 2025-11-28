@@ -1,4 +1,4 @@
-import type { Address, MarketId } from "@morpho-org/blue-sdk";
+import type { Address, MarketId } from "@taufinancexyz/blue-sdk";
 import type { Hex } from "viem";
 import type { SimulationState } from "./SimulationState.js";
 import type { MaybeDraft } from "./handlers/types.js";

@@ -1,5 +1,5 @@
 {
-  "name": "@morpho-org/blue-api-sdk",
+  "name": "@taufinancexyz/blue-api-sdk",
   "description": "GraphQL SDK that exports types from the [API's GraphQL schema](https://blue-api.morpho.org/graphql) and a useful Apollo cache controller.",
   "version": "2.0.0",
   "author": "Morpho Association <contact@morpho.org>",
@@ -18,14 +18,14 @@
     "build": "tsc --noEmit && tsc --build tsconfig.build.json"
   },
   "peerDependencies": {
-    "@morpho-org/blue-sdk": "workspace:^",
-    "@morpho-org/morpho-ts": "workspace:^"
+    "@taufinancexyz/blue-sdk": "workspace:^",
+    "@taufinancexyz/morpho-ts": "workspace:^"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.3",
     "@graphql-codegen/typescript": "^4.1.2",
-    "@morpho-org/blue-sdk": "workspace:^",
-    "@morpho-org/morpho-ts": "workspace:^",
+    "@taufinancexyz/blue-sdk": "workspace:^",
+    "@taufinancexyz/morpho-ts": "workspace:^",
     "graphql": "^16.10.0",
     "typescript": "^5.7.2"
   },

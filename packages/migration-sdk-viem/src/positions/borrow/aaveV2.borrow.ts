@@ -3,15 +3,15 @@ import {
   MathLib,
   type Token,
   getChainAddresses,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 
 import {
   blueAbi,
   getAuthorizationTypedData,
   getPermitTypedData,
-} from "@morpho-org/blue-sdk-viem";
-import { type Action, ActionBundle } from "@morpho-org/bundler-sdk-viem";
-import { Time } from "@morpho-org/morpho-ts";
+} from "@taufinancexyz/blue-sdk-viem";
+import { type Action, ActionBundle } from "@taufinancexyz/bundler-sdk-viem";
+import { Time } from "@taufinancexyz/morpho-ts";
 import {
   type Account,
   type Client,

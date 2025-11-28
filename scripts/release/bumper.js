@@ -31,7 +31,7 @@ export const git = new ConventionalGitClient();
 export const branch = await git.getCurrentBranch();
 export const channel = branch !== "main" ? branch : "latest";
 
-export const packageName = `@morpho-org/${basename(process.cwd())}`;
+export const packageName = `@taufinancexyz/${basename(process.cwd())}`;
 export const tagParams = {
   prefix: `${packageName}-`,
   skipUnstable: branch === "main",

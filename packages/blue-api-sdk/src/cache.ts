@@ -1,4 +1,4 @@
-import type { DottedKeys } from "@morpho-org/morpho-ts";
+import type { DottedKeys } from "@taufinancexyz/morpho-ts";
 import type {
   Market,
   MarketPosition,

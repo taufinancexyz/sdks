@@ -1,4 +1,4 @@
-import { BlueSdkConverter } from "@morpho-org/blue-api-sdk";
+import { BlueSdkConverter } from "@taufinancexyz/blue-api-sdk";
 import {
   type Address,
   ChainId,
@@ -7,9 +7,9 @@ import {
   erc20WrapperTokens,
   getChainAddresses,
   isMarketId,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 
-import { safeGetAddress, safeParseNumber } from "@morpho-org/blue-sdk-viem";
+import { safeGetAddress, safeParseNumber } from "@taufinancexyz/blue-sdk-viem";
 import {
   Flashbots,
   LiquidationEncoder,
@@ -21,7 +21,7 @@ import {
   getPositions,
   getRepayDataPreLiquidation,
   mainnetAddresses,
-} from "@morpho-org/liquidation-sdk-viem";
+} from "@taufinancexyz/liquidation-sdk-viem";
 import {
   type Account,
   type Chain,

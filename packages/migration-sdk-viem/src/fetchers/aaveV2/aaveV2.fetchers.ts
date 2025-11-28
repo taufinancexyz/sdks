@@ -1,5 +1,9 @@
-import { type Address, MathLib, getChainAddresses } from "@morpho-org/blue-sdk";
-import { isDefined, values } from "@morpho-org/morpho-ts";
+import {
+  type Address,
+  MathLib,
+  getChainAddresses,
+} from "@taufinancexyz/blue-sdk";
+import { isDefined, values } from "@taufinancexyz/morpho-ts";
 
 import { migrationAddresses } from "../../config.js";
 import type { MigratablePosition } from "../../positions/index.js";
@@ -14,7 +18,7 @@ import {
   type FetchParameters,
   blueAbi,
   fetchToken,
-} from "@morpho-org/blue-sdk-viem";
+} from "@taufinancexyz/blue-sdk-viem";
 
 import { type Client, erc20Abi, parseUnits } from "viem";
 import { getChainId, readContract } from "viem/actions";

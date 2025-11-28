@@ -1,30 +1,30 @@
 import "evm-maths";
 import fetchMock from "fetch-mock";
 
+import type { BuildTxInput } from "@paraswap/sdk";
 import {
   type Address,
   ChainId,
   type InputMarketParams,
   type MarketId,
   addressesRegistry,
-} from "@morpho-org/blue-sdk";
-import { Time, ZERO_ADDRESS, format } from "@morpho-org/morpho-ts";
-import type { BuildTxInput } from "@paraswap/sdk";
+} from "@taufinancexyz/blue-sdk";
+import { Time, ZERO_ADDRESS, format } from "@taufinancexyz/morpho-ts";
 
 import {
   blueAbi,
   fetchAccrualPosition,
   fetchMarket,
   fetchToken,
-} from "@morpho-org/blue-sdk-viem";
+} from "@taufinancexyz/blue-sdk-viem";
 import {
   Flashbots,
   LiquidationEncoder,
   curvePools,
   curveStableSwapNGAbi,
   mainnetAddresses,
-} from "@morpho-org/liquidation-sdk-viem";
-import { type AnvilTestClient, testAccount } from "@morpho-org/test";
+} from "@taufinancexyz/liquidation-sdk-viem";
+import { type AnvilTestClient, testAccount } from "@taufinancexyz/test";
 import {
   encodeFunctionData,
   erc20Abi,

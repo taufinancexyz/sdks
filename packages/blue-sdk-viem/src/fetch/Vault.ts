@@ -8,7 +8,7 @@ import {
   VaultConfig,
   type VaultPublicAllocatorConfig,
   getChainAddresses,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 
 import { getChainId, readContract } from "viem/actions";
 import { metaMorphoAbi, publicAllocatorAbi } from "../abis";

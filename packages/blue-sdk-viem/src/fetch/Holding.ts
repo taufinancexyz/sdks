@@ -5,7 +5,7 @@ import {
   getChainAddresses,
   permissionedBackedTokens,
   permissionedWrapperTokens,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import {
   type Address,
   type Client,
@@ -15,7 +15,7 @@ import {
 } from "viem";
 import { getBalance, getChainId, readContract } from "viem/actions";
 
-import { fromEntries, getValue } from "@morpho-org/morpho-ts";
+import { fromEntries, getValue } from "@taufinancexyz/morpho-ts";
 import {
   erc2612Abi,
   permissionedErc20WrapperAbi,

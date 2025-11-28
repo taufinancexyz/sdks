@@ -1,5 +1,5 @@
-import { type BigIntish, MathLib } from "@morpho-org/blue-sdk";
-import { Time } from "@morpho-org/morpho-ts";
+import { type BigIntish, MathLib } from "@taufinancexyz/blue-sdk";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 import { MorphoAaveMath } from "./AaveV3.maths.js";
 

@@ -1,9 +1,9 @@
-import type { Market, MarketId } from "@morpho-org/blue-sdk";
+import type { QueryOptions } from "@tanstack/query-core";
+import type { Market, MarketId } from "@taufinancexyz/blue-sdk";
 import {
   type DeploylessFetchParameters,
   fetchMarket,
-} from "@morpho-org/blue-sdk-viem";
-import type { QueryOptions } from "@tanstack/query-core";
+} from "@taufinancexyz/blue-sdk-viem";
 import type { ReadContractErrorType } from "viem";
 import type { Config } from "wagmi";
 import { hashFn } from "wagmi/query";

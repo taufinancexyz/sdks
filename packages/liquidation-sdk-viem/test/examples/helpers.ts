@@ -1,5 +1,5 @@
-import type { IPosition } from "@morpho-org/blue-sdk";
-import { BLUE_API_BASE_URL } from "@morpho-org/morpho-ts";
+import type { IPosition } from "@taufinancexyz/blue-sdk";
+import { BLUE_API_BASE_URL } from "@taufinancexyz/morpho-ts";
 import nock from "nock";
 import type { Address } from "viem";
 

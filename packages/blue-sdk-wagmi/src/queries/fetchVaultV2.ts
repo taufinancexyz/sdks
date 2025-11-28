@@ -1,9 +1,9 @@
-import type { VaultV2 } from "@morpho-org/blue-sdk";
+import type { QueryOptions } from "@tanstack/query-core";
+import type { VaultV2 } from "@taufinancexyz/blue-sdk";
 import {
   type DeploylessFetchParameters,
   fetchVaultV2,
-} from "@morpho-org/blue-sdk-viem";
-import type { QueryOptions } from "@tanstack/query-core";
+} from "@taufinancexyz/blue-sdk-viem";
 import type { Address, ReadContractErrorType } from "viem";
 import type { Config } from "wagmi";
 import { hashFn } from "wagmi/query";

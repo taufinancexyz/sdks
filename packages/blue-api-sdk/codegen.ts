@@ -1,6 +1,6 @@
 import type { CodegenConfig } from "@graphql-codegen/cli";
 
-import { BLUE_API_GRAPHQL_URL } from "@morpho-org/morpho-ts";
+import { BLUE_API_GRAPHQL_URL } from "@taufinancexyz/morpho-ts";
 
 const config: CodegenConfig = {
   overwrite: true,
@@ -26,11 +26,11 @@ const config: CodegenConfig = {
           },
           Address: {
             input: "string",
-            output: "@morpho-org/blue-sdk#Address",
+            output: "@taufinancexyz/blue-sdk#Address",
           },
           MarketId: {
             input: "string",
-            output: "@morpho-org/blue-sdk#MarketId",
+            output: "@taufinancexyz/blue-sdk#MarketId",
           },
         },
       },

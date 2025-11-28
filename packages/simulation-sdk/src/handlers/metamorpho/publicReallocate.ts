@@ -1,4 +1,8 @@
-import { type MarketId, MathLib, NATIVE_ADDRESS } from "@morpho-org/blue-sdk";
+import {
+  type MarketId,
+  MathLib,
+  NATIVE_ADDRESS,
+} from "@taufinancexyz/blue-sdk";
 
 import {
   MetaMorphoErrors,
@@ -11,7 +15,7 @@ import { handleBlueOperation } from "../blue/index.js";
 import { handleErc20Operation } from "../erc20/index.js";
 import type { OperationHandler } from "../types.js";
 
-import { ZERO_ADDRESS } from "@morpho-org/morpho-ts";
+import { ZERO_ADDRESS } from "@taufinancexyz/morpho-ts";
 import { handleMetaMorphoReallocateOperation } from "./reallocate.js";
 
 export const handleMetaMorphoPublicReallocateOperation: OperationHandler<

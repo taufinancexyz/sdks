@@ -1,6 +1,6 @@
-import type { MarketId } from "@morpho-org/blue-sdk";
-import { isDefined } from "@morpho-org/morpho-ts";
 import { useQueries } from "@tanstack/react-query";
+import type { MarketId } from "@taufinancexyz/blue-sdk";
+import { isDefined } from "@taufinancexyz/morpho-ts";
 import { useRef } from "react";
 import type { UnionOmit } from "viem";
 import { type Config, type ResolvedRegister, useConfig } from "wagmi";

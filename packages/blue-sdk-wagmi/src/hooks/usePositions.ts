@@ -1,5 +1,5 @@
-import type { MarketId } from "@morpho-org/blue-sdk";
 import { useQueries } from "@tanstack/react-query";
+import type { MarketId } from "@taufinancexyz/blue-sdk";
 import { useRef } from "react";
 import type { Address, UnionOmit } from "viem";
 import { type Config, type ResolvedRegister, useConfig } from "wagmi";

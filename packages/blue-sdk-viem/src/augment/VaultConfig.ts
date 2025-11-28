@@ -1,7 +1,7 @@
-import { VaultConfig } from "@morpho-org/blue-sdk";
+import { VaultConfig } from "@taufinancexyz/blue-sdk";
 import { fetchVaultConfig } from "../fetch";
 
-declare module "@morpho-org/blue-sdk" {
+declare module "@taufinancexyz/blue-sdk" {
   namespace VaultConfig {
     let fetch: typeof fetchVaultConfig;
   }

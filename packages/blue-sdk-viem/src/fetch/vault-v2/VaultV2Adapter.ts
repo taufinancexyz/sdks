@@ -1,7 +1,7 @@
 import {
   UnsupportedVaultV2AdapterError,
   getChainAddresses,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import type { Address, Client } from "viem";
 import { getChainId, readContract } from "viem/actions";
 import { morphoVaultV1AdapterFactoryAbi } from "../../abis";

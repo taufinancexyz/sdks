@@ -1,8 +1,8 @@
 import type { ParaswapOperations } from "../../operations.js";
 import type { OperationHandler } from "../types.js";
 
-import { MathLib } from "@morpho-org/blue-sdk";
-import { ZERO_ADDRESS } from "@morpho-org/morpho-ts";
+import { MathLib } from "@taufinancexyz/blue-sdk";
+import { ZERO_ADDRESS } from "@taufinancexyz/morpho-ts";
 import { hexToBigInt, size, slice } from "viem";
 import { ParaswapErrors } from "../../errors.js";
 import { handleErc20Operation } from "../erc20/index.js";

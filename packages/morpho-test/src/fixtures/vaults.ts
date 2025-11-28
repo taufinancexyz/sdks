@@ -3,8 +3,8 @@ import {
   type IVaultConfig,
   VaultConfig,
   addressesRegistry,
-} from "@morpho-org/blue-sdk";
-import { randomAddress } from "@morpho-org/test";
+} from "@taufinancexyz/blue-sdk";
+import { randomAddress } from "@taufinancexyz/test";
 
 const { wNative, usdc, dai } = addressesRegistry[ChainId.EthMainnet];
 

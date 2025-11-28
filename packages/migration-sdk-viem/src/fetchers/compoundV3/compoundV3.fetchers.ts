@@ -1,11 +1,11 @@
-import { type Address, getChainAddresses } from "@morpho-org/blue-sdk";
-import { isDefined, values } from "@morpho-org/morpho-ts";
+import { type Address, getChainAddresses } from "@taufinancexyz/blue-sdk";
+import { isDefined, values } from "@taufinancexyz/morpho-ts";
 
 import {
   type FetchParameters,
   blueAbi,
   fetchToken,
-} from "@morpho-org/blue-sdk-viem";
+} from "@taufinancexyz/blue-sdk-viem";
 import type { Client } from "viem";
 import { getChainId, readContract } from "viem/actions";
 import { cometAbi, cometExtAbi } from "../../abis/compoundV3.js";

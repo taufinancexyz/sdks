@@ -6,12 +6,12 @@ import {
   type InputMarketParams,
   type MarketId,
   addressesRegistry,
-} from "@morpho-org/blue-sdk";
-import { Time, format } from "@morpho-org/morpho-ts";
+} from "@taufinancexyz/blue-sdk";
+import { Time, format } from "@taufinancexyz/morpho-ts";
 
-import { blueAbi, fetchMarket, fetchToken } from "@morpho-org/blue-sdk-viem";
-import { Flashbots } from "@morpho-org/liquidation-sdk-viem";
-import { type AnvilTestClient, testAccount } from "@morpho-org/test";
+import { blueAbi, fetchMarket, fetchToken } from "@taufinancexyz/blue-sdk-viem";
+import { Flashbots } from "@taufinancexyz/liquidation-sdk-viem";
+import { type AnvilTestClient, testAccount } from "@taufinancexyz/test";
 import { erc20Abi, maxUint256, parseUnits } from "viem";
 import type { mainnet } from "viem/chains";
 import { afterEach, beforeEach, describe, expect, vi } from "vitest";

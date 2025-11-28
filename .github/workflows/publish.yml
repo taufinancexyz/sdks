@@ -34,7 +34,7 @@ jobs:
 
           - migration-sdk-viem
 
-    name: "@morpho-org/${{ matrix.package }}"
+    name: "@taufinancexyz/${{ matrix.package }}"
     runs-on: ubuntu-latest
 
     steps:
@@ -50,7 +50,7 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
           registry-url: https://registry.npmjs.org
-          scope: '@morpho-org'
+          scope: '@taufinancexyz'
 
       # Required to use OIDC trusted publishing.
       - run: npm install -g npm@latest

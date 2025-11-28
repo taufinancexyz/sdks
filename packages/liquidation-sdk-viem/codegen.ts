@@ -1,6 +1,6 @@
 import type { CodegenConfig } from "@graphql-codegen/cli";
 
-import { BLUE_API_GRAPHQL_URL } from "@morpho-org/morpho-ts";
+import { BLUE_API_GRAPHQL_URL } from "@taufinancexyz/morpho-ts";
 
 const config: CodegenConfig = {
   overwrite: true,
@@ -11,7 +11,7 @@ const config: CodegenConfig = {
       plugins: ["typescript-operations"],
       preset: "import-types",
       presetConfig: {
-        typesPath: "@morpho-org/blue-api-sdk",
+        typesPath: "@taufinancexyz/blue-api-sdk",
       },
       config: {
         avoidOptionals: {

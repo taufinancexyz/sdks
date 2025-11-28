@@ -1,6 +1,9 @@
-import type { Position } from "@morpho-org/blue-sdk";
-import { type FetchParameters, fetchPosition } from "@morpho-org/blue-sdk-viem";
 import type { QueryOptions } from "@tanstack/query-core";
+import type { Position } from "@taufinancexyz/blue-sdk";
+import {
+  type FetchParameters,
+  fetchPosition,
+} from "@taufinancexyz/blue-sdk-viem";
 import type { ReadContractErrorType } from "viem";
 import type { Config } from "wagmi";
 import { hashFn } from "wagmi/query";

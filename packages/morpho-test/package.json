@@ -1,6 +1,6 @@
 {
-  "name": "@morpho-org/morpho-test",
-  "description": "Framework-agnostic extension of `@morpho-org/blue-sdk` that exports test fixtures useful for E2E tests on forks.",
+  "name": "@taufinancexyz/morpho-test",
+  "description": "Framework-agnostic extension of `@taufinancexyz/blue-sdk` that exports test fixtures useful for E2E tests on forks.",
   "version": "2.0.0",
   "author": "Morpho Association <contact@morpho.org>",
   "contributors": ["Rubilmax <rmilon@gmail.com>"],
@@ -18,15 +18,15 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "@morpho-org/blue-sdk": "workspace:^",
-    "@morpho-org/morpho-ts": "workspace:^",
-    "@morpho-org/test": "workspace:^",
+    "@taufinancexyz/blue-sdk": "workspace:^",
+    "@taufinancexyz/morpho-ts": "workspace:^",
+    "@taufinancexyz/test": "workspace:^",
     "viem": "^2.21.10"
   },
   "devDependencies": {
-    "@morpho-org/blue-sdk": "workspace:^",
-    "@morpho-org/morpho-ts": "workspace:^",
-    "@morpho-org/test": "workspace:^",
+    "@taufinancexyz/blue-sdk": "workspace:^",
+    "@taufinancexyz/morpho-ts": "workspace:^",
+    "@taufinancexyz/test": "workspace:^",
     "@types/node": "^22.13.1",
     "typescript": "^5.7.2",
     "viem": "^2.33.3"

@@ -1,7 +1,7 @@
-import { VaultMarketPublicAllocatorConfig } from "@morpho-org/blue-sdk";
+import { VaultMarketPublicAllocatorConfig } from "@taufinancexyz/blue-sdk";
 import { fetchVaultMarketPublicAllocatorConfig } from "../fetch";
 
-declare module "@morpho-org/blue-sdk" {
+declare module "@taufinancexyz/blue-sdk" {
   namespace VaultMarketPublicAllocatorConfig {
     let fetch: typeof fetchVaultMarketPublicAllocatorConfig;
   }

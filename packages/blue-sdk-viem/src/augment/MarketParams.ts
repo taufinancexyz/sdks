@@ -1,7 +1,7 @@
-import { MarketParams } from "@morpho-org/blue-sdk";
+import { MarketParams } from "@taufinancexyz/blue-sdk";
 import { fetchMarketParams } from "../fetch";
 
-declare module "@morpho-org/blue-sdk" {
+declare module "@taufinancexyz/blue-sdk" {
   namespace MarketParams {
     let fetch: typeof fetchMarketParams;
   }

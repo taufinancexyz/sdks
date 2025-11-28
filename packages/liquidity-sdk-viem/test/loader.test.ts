@@ -1,8 +1,8 @@
-import { ChainId } from "@morpho-org/blue-sdk";
+import { ChainId } from "@taufinancexyz/blue-sdk";
 import nock from "nock";
 
-import { markets } from "@morpho-org/morpho-test";
-import { BLUE_API_BASE_URL } from "@morpho-org/morpho-ts";
+import { markets } from "@taufinancexyz/morpho-test";
+import { BLUE_API_BASE_URL } from "@taufinancexyz/morpho-ts";
 import { describe, expect } from "vitest";
 import { LiquidityLoader } from "../src";
 import apiMock0 from "./mocks/dataloader.0.json";

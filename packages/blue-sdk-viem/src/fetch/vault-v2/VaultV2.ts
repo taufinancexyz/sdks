@@ -4,7 +4,7 @@ import {
   VaultV2,
   VaultV2MorphoVaultV1Adapter,
   getChainAddresses,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import {
   type Address,
   type Client,

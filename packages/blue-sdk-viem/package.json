@@ -1,6 +1,6 @@
 {
-  "name": "@morpho-org/blue-sdk-viem",
-  "description": "Viem-based augmentation of `@morpho-org/blue-sdk` that exports (and optionally injects) viem-based fetch methods.",
+  "name": "@taufinancexyz/blue-sdk-viem",
+  "description": "Viem-based augmentation of `@taufinancexyz/blue-sdk` that exports (and optionally injects) viem-based fetch methods.",
   "version": "2.0.0",
   "author": "Morpho Association <contact@morpho.org>",
   "contributors": ["Rubilmax <rmilon@gmail.com>"],
@@ -19,15 +19,15 @@
     "build": "tsc --noEmit && tsc --build tsconfig.build.json"
   },
   "peerDependencies": {
-    "@morpho-org/blue-sdk": "workspace:^",
-    "@morpho-org/morpho-ts": "workspace:^",
+    "@taufinancexyz/blue-sdk": "workspace:^",
+    "@taufinancexyz/morpho-ts": "workspace:^",
     "viem": "^2.0.0"
   },
   "devDependencies": {
-    "@morpho-org/blue-sdk": "workspace:^",
-    "@morpho-org/morpho-test": "workspace:^",
-    "@morpho-org/morpho-ts": "workspace:^",
-    "@morpho-org/test": "workspace:^",
+    "@taufinancexyz/blue-sdk": "workspace:^",
+    "@taufinancexyz/morpho-test": "workspace:^",
+    "@taufinancexyz/morpho-ts": "workspace:^",
+    "@taufinancexyz/test": "workspace:^",
     "hardhat": "^2.22.18",
     "typescript": "^5.7.2",
     "viem": "^2.33.3",

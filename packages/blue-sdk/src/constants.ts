@@ -1,4 +1,4 @@
-import { Time } from "@morpho-org/morpho-ts";
+import { Time } from "@taufinancexyz/morpho-ts";
 
 /**
  * The liquidation cursor used to calculate the liquidation incentive. Hardcoded to 30%.

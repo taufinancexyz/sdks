@@ -1,22 +1,22 @@
 import "evm-maths";
 import fetchMock from "fetch-mock";
 
+import type { BuildTxInput } from "@paraswap/sdk";
 import {
   type Address,
   ChainId,
   type InputMarketParams,
   type MarketId,
   addressesRegistry,
-} from "@morpho-org/blue-sdk";
-import { format } from "@morpho-org/morpho-ts";
-import type { BuildTxInput } from "@paraswap/sdk";
+} from "@taufinancexyz/blue-sdk";
+import { format } from "@taufinancexyz/morpho-ts";
 
-import { blueAbi, fetchAccrualPosition } from "@morpho-org/blue-sdk-viem";
+import { blueAbi, fetchAccrualPosition } from "@taufinancexyz/blue-sdk-viem";
 import {
   Flashbots,
   type LiquidationEncoder,
-} from "@morpho-org/liquidation-sdk-viem";
-import { type AnvilTestClient, testAccount } from "@morpho-org/test";
+} from "@taufinancexyz/liquidation-sdk-viem";
+import { type AnvilTestClient, testAccount } from "@taufinancexyz/test";
 import { encodeFunctionData, erc20Abi, maxUint256, parseUnits } from "viem";
 import type { mainnet } from "viem/chains";
 import { afterEach, beforeEach, describe, expect, vi } from "vitest";

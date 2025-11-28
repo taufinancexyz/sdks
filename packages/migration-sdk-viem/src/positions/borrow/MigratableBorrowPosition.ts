@@ -3,9 +3,9 @@ import type {
   ChainId,
   MarketParams,
   Token,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 
-import type { ActionBundle } from "@morpho-org/bundler-sdk-viem";
+import type { ActionBundle } from "@taufinancexyz/bundler-sdk-viem";
 import type {
   BorrowMigrationLimiter,
   MigratableProtocol,

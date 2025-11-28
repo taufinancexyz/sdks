@@ -3,11 +3,11 @@ import {
   type MarketId,
   Token,
   addresses,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import {
   type DeploylessFetchParameters,
   blueAbi,
-} from "@morpho-org/blue-sdk-viem";
+} from "@taufinancexyz/blue-sdk-viem";
 import {
   type ConfigParameter,
   type FetchMarketsParameters,
@@ -27,9 +27,12 @@ import {
   useVaultV2Adapters,
   useVaultV2s,
   useVaults,
-} from "@morpho-org/blue-sdk-wagmi";
-import { values } from "@morpho-org/morpho-ts";
-import { type MinimalBlock, SimulationState } from "@morpho-org/simulation-sdk";
+} from "@taufinancexyz/blue-sdk-wagmi";
+import { values } from "@taufinancexyz/morpho-ts";
+import {
+  type MinimalBlock,
+  SimulationState,
+} from "@taufinancexyz/simulation-sdk";
 import { useMemo } from "react";
 import type { Address, ReadContractErrorType, UnionOmit } from "viem";
 import { type Config, type ResolvedRegister, useReadContract } from "wagmi";

@@ -1,8 +1,8 @@
-import { VaultMarketAllocation } from "@morpho-org/blue-sdk";
+import { VaultMarketAllocation } from "@taufinancexyz/blue-sdk";
 
 import { fetchVaultMarketAllocation } from "../fetch";
 
-declare module "@morpho-org/blue-sdk" {
+declare module "@taufinancexyz/blue-sdk" {
   namespace VaultMarketAllocation {
     let fetch: typeof fetchVaultMarketAllocation;
   }

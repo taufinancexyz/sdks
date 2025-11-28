@@ -1,4 +1,4 @@
-import { type ChainId, getChainAddresses } from "@morpho-org/blue-sdk";
+import { type ChainId, getChainAddresses } from "@taufinancexyz/blue-sdk";
 import type { TypedDataDefinition } from "viem";
 
 export interface AuthorizationArgs {

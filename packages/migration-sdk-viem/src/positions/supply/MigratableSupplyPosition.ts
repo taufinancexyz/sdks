@@ -1,6 +1,6 @@
-import type { Address, ChainId } from "@morpho-org/blue-sdk";
+import type { Address, ChainId } from "@taufinancexyz/blue-sdk";
 
-import type { ActionBundle } from "@morpho-org/bundler-sdk-viem";
+import type { ActionBundle } from "@taufinancexyz/bundler-sdk-viem";
 import type {
   MigratableProtocol,
   MigrationTransactionRequirement,

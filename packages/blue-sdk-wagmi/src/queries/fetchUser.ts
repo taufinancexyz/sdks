@@ -1,6 +1,6 @@
-import type { User } from "@morpho-org/blue-sdk";
-import { type FetchParameters, fetchUser } from "@morpho-org/blue-sdk-viem";
 import type { QueryOptions } from "@tanstack/query-core";
+import type { User } from "@taufinancexyz/blue-sdk";
+import { type FetchParameters, fetchUser } from "@taufinancexyz/blue-sdk-viem";
 import type { Address, ReadContractErrorType } from "viem";
 import type { Config } from "wagmi";
 import { hashFn } from "wagmi/query";

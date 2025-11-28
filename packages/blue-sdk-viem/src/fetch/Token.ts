@@ -15,7 +15,7 @@ import {
   Token,
   getChainAddresses,
   getUnwrappedToken,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import { getChainId, readContract } from "viem/actions";
 import { erc5267Abi, wstEthAbi } from "../abis";
 import { abi, code } from "../queries/GetToken";

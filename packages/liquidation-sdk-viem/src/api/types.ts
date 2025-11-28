@@ -1,4 +1,4 @@
-import type * as Types from "@morpho-org/blue-api-sdk";
+import type * as Types from "@taufinancexyz/blue-api-sdk";
 
 export type GetAssetByAddressQueryVariables = Types.Exact<{
   chainId: Types.Scalars["Int"]["input"];

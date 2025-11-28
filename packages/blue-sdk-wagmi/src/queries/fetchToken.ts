@@ -1,9 +1,9 @@
-import type { Token } from "@morpho-org/blue-sdk";
+import type { QueryOptions } from "@tanstack/query-core";
+import type { Token } from "@taufinancexyz/blue-sdk";
 import {
   type DeploylessFetchParameters,
   fetchToken,
-} from "@morpho-org/blue-sdk-viem";
-import type { QueryOptions } from "@tanstack/query-core";
+} from "@taufinancexyz/blue-sdk-viem";
 import type { Address, ReadContractErrorType } from "viem";
 import type { Config } from "wagmi";
 import { hashFn } from "wagmi/query";

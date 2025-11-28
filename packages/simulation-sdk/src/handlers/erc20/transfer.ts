@@ -1,6 +1,6 @@
-import { MathLib, getChainAddresses } from "@morpho-org/blue-sdk";
+import { MathLib, getChainAddresses } from "@taufinancexyz/blue-sdk";
 
-import { ZERO_ADDRESS } from "@morpho-org/morpho-ts";
+import { ZERO_ADDRESS } from "@taufinancexyz/morpho-ts";
 import { Erc20Errors, UnknownHoldingError } from "../../errors.js";
 import type { Erc20Operations } from "../../operations.js";
 import type { OperationHandler } from "../types.js";

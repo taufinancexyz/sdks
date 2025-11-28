@@ -1,7 +1,7 @@
 import {
   AccrualVaultV2MorphoVaultV1Adapter,
   VaultV2MorphoVaultV1Adapter,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import { type Address, type Client, erc20Abi } from "viem";
 import { getChainId, readContract } from "viem/actions";
 import { morphoVaultV1AdapterAbi } from "../../abis";

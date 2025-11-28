@@ -1,5 +1,5 @@
-import type { Address } from "@morpho-org/blue-sdk";
-import type { MarketId } from "@morpho-org/blue-sdk";
+import type { Address } from "@taufinancexyz/blue-sdk";
+import type { MarketId } from "@taufinancexyz/blue-sdk";
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = {

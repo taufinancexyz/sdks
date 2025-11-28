@@ -13,8 +13,8 @@ import {
   VaultMarketConfig,
   VaultMarketPublicAllocatorConfig,
   VaultUtils,
-} from "@morpho-org/blue-sdk";
-import { ZERO_ADDRESS, isDefined } from "@morpho-org/morpho-ts";
+} from "@taufinancexyz/blue-sdk";
+import { ZERO_ADDRESS, isDefined } from "@taufinancexyz/morpho-ts";
 
 import type {
   Chain as ApiChain,

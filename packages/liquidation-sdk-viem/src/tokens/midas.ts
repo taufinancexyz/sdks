@@ -1,4 +1,4 @@
-import { type Address, type ChainId, MathLib } from "@morpho-org/blue-sdk";
+import { type Address, type ChainId, MathLib } from "@taufinancexyz/blue-sdk";
 import { midasConfigs } from "../addresses";
 
 const ONE_HUNDRED_PERCENT = 100n * 100n;

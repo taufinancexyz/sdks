@@ -11,14 +11,14 @@ import {
   getUnwrappedToken,
   permissionedBackedTokens,
   permissionedWrapperTokens,
-} from "@morpho-org/blue-sdk";
+} from "@taufinancexyz/blue-sdk";
 import {
   entries,
   getLast,
   getValue,
   keys,
   values,
-} from "@morpho-org/morpho-ts";
+} from "@taufinancexyz/morpho-ts";
 import {
   APPROVE_ONLY_ONCE_TOKENS,
   type Erc20Operations,
@@ -33,7 +33,7 @@ import {
   produceImmutable,
   simulateOperation,
   simulateOperations,
-} from "@morpho-org/simulation-sdk";
+} from "@taufinancexyz/simulation-sdk";
 
 import { type UnionOmit, isAddressEqual, maxUint256 } from "viem";
 import { BundlerErrors } from "./errors.js";
