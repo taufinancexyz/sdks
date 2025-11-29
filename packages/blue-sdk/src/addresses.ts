@@ -199,7 +199,7 @@ const _addressesRegistry = {
       bundler3: "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
       generalAdapter1: "0x322813Fd9A801c5507c9de605d63CEA4f2CE6c44",
     },
-    permit2: "0x7a2088a1bFc9d81c55368AE168C2C02570cB814F",
+    permit2: "0x000000000022d473030f116ddee9f6b43ac78ba3",
     adaptiveCurveIrm: "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
     metaMorphoFactory: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
     publicAllocator: "0xTHISSHOULDNTBECALLED",
