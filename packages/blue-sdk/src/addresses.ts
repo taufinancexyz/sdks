@@ -196,11 +196,11 @@ const _addressesRegistry = {
   [ChainId.Localhost]: {
     morpho: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
     bundler3: {
-      bundler3: "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
-      generalAdapter1: "0x322813Fd9A801c5507c9de605d63CEA4f2CE6c44",
+      bundler3: "0x67d269191c92Caf3cD7723F116c85e6E9bf55933",
+      generalAdapter1: "0xE6E340D132b5f46d1e472DebcD681B2aBc16e57E",
     },
     permit2: "0x000000000022d473030f116ddee9f6b43ac78ba3",
-    adaptiveCurveIrm: "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
+    adaptiveCurveIrm: "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
     metaMorphoFactory: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
     publicAllocator: "0xTHISSHOULDNTBECALLED",
     vaultV2Factory: "0xTHISSHOULDNTBECALLED",
